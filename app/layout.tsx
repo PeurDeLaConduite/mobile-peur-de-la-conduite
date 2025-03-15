@@ -60,9 +60,10 @@ export const metadata: Metadata = {
         ],        
     },
     alternates: {
-        canonical: "https://mobile.peur-de-la-conduite.fr/",
+        canonical: "https://peur-de-la-conduite.fr/", 
         media: {
-            "only screen and (min-width: 640px)": "https://desktop.peur-de-la-conduite.fr/",
+            "only screen and (max-width: 900px)": "https://mobile.peur-de-la-conduite.fr/", 
+            "only screen and (min-width: 900px)": "https://desktop.peur-de-la-conduite.fr/", 
         },
     },
 };
