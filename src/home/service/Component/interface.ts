@@ -2,6 +2,7 @@ export interface ServiceItemProps {
     title: string;
     imgSrc: string;
     imgAlt: string;
+    id: string;
 }
 
 export interface ServiceCategoryProps {

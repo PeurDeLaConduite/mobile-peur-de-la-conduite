@@ -1,74 +1,87 @@
 import { Metadata } from "next";
-
+import { servicesData } from "../../src/home/service/Component/servicesData";
+import React from "react";
 export const metadata: Metadata = {
     title: "Nos Tarifs",
 };
-const services = [
-    {
-        title: "Stress avant examen",
-        prices: [
-            { sessions: 1, total: 49.99, perSession: 49.99 },
-            { sessions: 3, total: 139.99, perSession: 46.66 },
-            { sessions: 5, total: 224.99, perSession: 44.99 },
-            { sessions: 10, total: 399.99, perSession: 39.99 },
-        ],
-    },
-    {
-        title: "Amaxophobie",
-        prices: [
-            { sessions: 1, total: 59.99, perSession: 59.99 },
-            { sessions: 3, total: 169.99, perSession: 56.66 },
-            { sessions: 5, total: 279.99, perSession: 55.99 },
-            { sessions: 10, total: 499.99, perSession: 49.99 },
-        ],
-    },
-];
+import Tarifs from "../../src/components/svg_Icon/Tarifs";
 export default function Page() {
     return (
-        <section className="section tarfifs" id="prices">
+        <section className="section page" id="prices">
             <div className="fixed-menu"></div>
             <div className="container">
-                <h1 className="title">Tarifs des Prestations</h1>
+                <div className="page-title">
+                    <Tarifs />
+                    <h1 className="title">Tarifs des Prestations</h1>
+                </div>
 
-                <section className="packs">
-                    <div className="packs-container">
-                        {services.map((service, index) => (
-                            <div key={index + "trf"} className="price-card">
-                                <h2 className="price-title">
-                                    Coaching<span>{service.title}</span>
-                                </h2>
-                                <table className="price-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Nb de Séances</th>
-                                            <th>Prix Total (€)</th>
-                                            <th>Prix Séance (€)</th>
-                                        </tr>
-                                    </thead>
+                {Object.values(servicesData).map((category) => (
+                    <React.Fragment key={category.id}>
+                        <div className="fixed-menu"></div>
+                        <section className="category" id={category.ref}>
+                            <h2 className="category-title">{category.title}</h2>
+                            <p className="category-intro">{category.intro}</p>
 
-                                    <tbody>
-                                        {service.prices.map((price, idx) => (
-                                            <tr key={idx + "trf-col"}>
-                                                <td className="nb-sessions">
-                                                    {price.sessions}
-                                                </td>
-                                                <td className="text-center">
-                                                    {price.total.toFixed(2)}€
-                                                </td>
-                                                <td className="text-center">
-                                                    {price.perSession.toFixed(
-                                                        2
-                                                    )}
-                                                    €
-                                                </td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                        ))}
-                    </div>
-                </section>
+                            {category.services.map((service, index) => (
+                                <div
+                                    className="packs-container"
+                                    key={index + "trf"}
+                                >
+                                    <div className="price-title">
+                                        <div className="coach">
+                                            <p>Coaching</p>
+                                            <div className="service-image">
+                                                <img
+                                                    src={service.imgSrc}
+                                                    alt={service.imgAlt}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="coach2">
+                                            <div className="empty"></div>
+
+                                            <h3>{service.title}</h3>
+                                        </div>
+                                    </div>
+                                    <div className="price-card">
+                                        <table className="price-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nb de Séances</th>
+                                                    <th>Prix Total (€)</th>
+                                                    <th>Prix Séance (€)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {category.prices.map(
+                                                    (price, idx) => (
+                                                        <tr key={idx}>
+                                                            <td className="nb-sessions">
+                                                                {price.sessions}
+                                                            </td>
+                                                            <td className="text-center">
+                                                                {price.total.toFixed(
+                                                                    2
+                                                                )}
+                                                                €
+                                                            </td>
+                                                            <td className="text-center">
+                                                                {price.perSession.toFixed(
+                                                                    2
+                                                                )}
+                                                                €
+                                                            </td>
+                                                        </tr>
+                                                    )
+                                                )}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            ))}
+                        </section>
+                    </React.Fragment>
+                ))}
             </div>
         </section>
     );

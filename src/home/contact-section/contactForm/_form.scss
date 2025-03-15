@@ -2,7 +2,9 @@
     .ctc-form {
         position: relative;
         gap: 40px !important;
+
         .form {
+            // background: #000;
             display: flex;
             flex-flow: column wrap;
             gap: 12px;
@@ -14,6 +16,9 @@
                 align-items: center;
                 display: block;
                 height: fit-content;
+                &:nth-of-type(1) {
+                    margin-top: 12px;
+                }
             }
             input,
             textarea {

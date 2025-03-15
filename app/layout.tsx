@@ -3,7 +3,6 @@ import HeaderLazy from "../src/components/header/HeaderLazy"
 import Footer from "../src/components/footer/footer"
 import ClientLayout from "./ClientLayout"; 
 import "./globals.css"
-// import "../src/assets/styles/main.scss";
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://www.peur-de-la-conduite.fr/"),
@@ -76,13 +75,8 @@ export default function RootLayout({
     return (
         <html lang="fr-FR">
            <head>
-                {/* <link rel="canonical" href="https://peur-de-la-conduite.fr/"/> */}
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
-                            
-                {/* <link rel="preload" href="./styles.css" as="style" />
-                <link rel="stylesheet" href="./styles.css" fetchPriority="high"/> */}
-
                 <link rel="preload" href="./deferCss.css" as="style" />
                 <link
                     rel="stylesheet"
