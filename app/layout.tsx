@@ -5,7 +5,7 @@ import ClientLayout from "./ClientLayout";
 import "./globals.css"
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://www.peur-de-la-conduite.fr/"),
+    metadataBase: new URL("https://peur-de-la-conduite.fr/"),
     title: {
         template: '%s | Peur de la conduite',
         default: 'Peur de la conduite',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
             Mounir Bouakkaz, enseignant de la conduite, vous accompagne avec un coaching personnalisé 
             pour vaincre l’amaxophobie, gérer le stress avant examen et améliorer votre maîtrise au volant.
         `,
-        url: "https://www.peur-de-la-conduite.fr/",
+        url: "https://peur-de-la-conduite.fr/",
         siteName: "Peur de la conduite",
         locale: "fr_FR",
         type: "website",
@@ -60,9 +60,9 @@ export const metadata: Metadata = {
         ],        
     },
     alternates: {
-        canonical: "https://m-peur-de-la-conduite.lemaignent.com/",
+        canonical: "https://mobile.peur-de-la-conduite.fr/",
         media: {
-            "only screen and (min-width: 640px)": "https://peur-de-la-conduite.lemaignent.com/",
+            "only screen and (min-width: 640px)": "https://desktop.peur-de-la-conduite.fr/",
         },
     },
 };

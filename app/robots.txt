@@ -1,4 +1,4 @@
-# robots.txt pour jerem16-peur-de-la-conduite.com
+# robots.txt pour peur-de-la-conduite.fr/
 
 # Autoriser tous les robots d'exploration
 User-agent: *
@@ -16,4 +16,4 @@ Disallow: /*/loading
 Allow: /
 
 # Fournir l'emplacement du sitemap
-Sitemap: https://jerem16-peur-de-la-conduite.com/sitemap.xml
+Sitemap: https://mobile.peur-de-la-conduite.fr/sitemap.xml
