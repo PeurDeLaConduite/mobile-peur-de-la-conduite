@@ -1,6 +1,8 @@
 import Link from "next/link";
+import React from "react";
+import dynamic from "next/dynamic";
 import SocialLinks from "../../home/contact-section/contactCard/SocialLinks";
-export default function Footer() {
+const Footer = () => {
     return (
         <footer className="footer">
             <div className="container">
@@ -17,4 +19,5 @@ export default function Footer() {
             </div>
         </footer>
     );
-}
+};
+export default dynamic(() => Promise.resolve(React.memo(Footer)));

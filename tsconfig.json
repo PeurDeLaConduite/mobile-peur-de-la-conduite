@@ -27,7 +27,6 @@
         "**/*.tsx",
         "src/utils/context/NavigationContext.tsx",
         "src/components/header/utils/HiddenDelayComponent.tsx",
-        "app/headerProps.jsx",
         "src/components/svg_Icon/utils/Arrow.jsx",
         "src/components/slider/Slider.tsx",
         "src/components/slider/SliderArrow.jsx",

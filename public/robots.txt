@@ -5,7 +5,6 @@ User-agent: *
 Disallow: /amplify/
 Disallow: /src/
 Disallow: /utils/
-Disallow: /app/fonts/
 Disallow: /public/css/
 Disallow: /*/error
 Disallow: /*/loading

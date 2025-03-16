@@ -50,6 +50,8 @@ export default function Page() {
                                                 <img
                                                     src="/img/utils/bulle-bd.svg"
                                                     alt={service.imgAlt}
+                                                    width={24}
+                                                    height={25}
                                                 />
                                             </div>
                                             <p className="service-description">

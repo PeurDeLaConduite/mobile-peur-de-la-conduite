@@ -1,7 +1,7 @@
 import React, { lazy } from "react";
 import { Metadata } from "next";
 import Slider from "../src/home/slider/Slider";
-// import About from "../src/home/about";
+import Loader from "../src/components/loader/Loader";
 
 export const metadata: Metadata = {
     title: "Accueil | Peur de la conduite",
@@ -17,7 +17,8 @@ export default function Home() {
             </section>
             <section className="section about-bg" id="about">
                 <div className="fixed-menu"></div>
-                <React.Suspense fallback={<div>Chargement...</div>}>
+
+                <React.Suspense fallback={<Loader />}>
                     <About />
                 </React.Suspense>
             </section>

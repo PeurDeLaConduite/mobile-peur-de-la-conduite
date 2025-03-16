@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import HeaderLazy from "../src/components/header/HeaderLazy"
-import Footer from "../src/components/footer/footer"
+import Loader from "../src/components/loader/Loader";
 import ClientLayout from "./ClientLayout"; 
 import "./globals.css"
-
+import { lazy, Suspense } from "react";
+const Footer = lazy(() => import("../src/components/footer/footer"));
 export const metadata: Metadata = {
     metadataBase: new URL("https://peur-de-la-conduite.fr/"),
     title: {
@@ -85,6 +86,7 @@ export default function RootLayout({
                     fetchPriority="low"
                 />
                 <link rel="preload" href="./tarifs.css" as="style" />
+                <link rel="preload" href="img/retroviseur-1.svg" as="image" />
                 <link
                     rel="stylesheet"
                     href="./tarifs.css"
@@ -99,7 +101,9 @@ export default function RootLayout({
                             </div>
                         </header>
                         <main>{children}</main>
-                        <Footer />
+                        <Suspense fallback={<Loader />}>
+                            <Footer />
+                        </Suspense>
                     </ClientLayout>
             </body>
         </html>
