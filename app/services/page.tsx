@@ -32,10 +32,7 @@ export default function Page() {
                                         className="packs-container"
                                         id={service.id}
                                     >
-                                        <div
-                                            className="margin-srv"
-                                            id={service.id}
-                                        ></div>
+                                        <div className="margin-srv"></div>
                                         <div className="srvP_card-title">
                                             <div className="srvP-img">
                                                 <img
