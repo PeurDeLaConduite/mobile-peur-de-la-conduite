@@ -86,7 +86,6 @@ export default function RootLayout({
                     fetchPriority="low"
                 />
                 <link rel="preload" href="./tarifs.css" as="style" />
-                <link rel="preload" href="img/retroviseur-1.svg" as="image" />
                 <link
                     rel="stylesheet"
                     href="./tarifs.css"
