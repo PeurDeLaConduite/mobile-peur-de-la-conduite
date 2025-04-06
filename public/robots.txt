@@ -18,5 +18,8 @@ Disallow: /*/loading
 # Permettre l'accès à tous les autres répertoires et fichiers publics
 Allow: /
 
+# Autoriser l'accès aux fichiers dans _next/static/ nécessaires au rendu
+Allow: /_next/static/
+
 # Fournir l'emplacement du sitemap
 Sitemap: https://mobile.peur-de-la-conduite.fr/sitemap.xml
