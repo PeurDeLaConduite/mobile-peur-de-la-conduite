@@ -1,19 +1,21 @@
-# robots.txt pour peur-de-la-conduite.fr/
-
-# Autoriser tous les robots d'exploration
 User-agent: *
-Disallow: /amplify/       # Bloque l'accès au dossier amplify
-Disallow: /src/           # Bloque l'accès au dossier src
-Disallow: /utils/         # Bloque l'accès aux utilitaires
-Disallow: /app/fonts/     # Bloque l'accès aux fichiers de polices
-Disallow: /public/css/    # Bloque l'accès aux fichiers CSS
+Disallow: /amplify/
+Disallow: /src/
+Disallow: /utils/
+Disallow: /app/fonts/
+Disallow: /public/css/
 
-# Exclure les pages d'erreur, de chargement ou autres éléments spécifiques
-Disallow: /*/error
+# Bloquer uniquement les pages sans contenu
+Disallow: /blog
+Disallow: /reservation
+Disallow: /mentions-legales
+Disallow: /informations-legales
+
+# Optionnel : blocage d'états transitoires (chargement, erreur)
 Disallow: /*/loading
+Disallow: /*/error
 
-# Permettre l'accès à tous les autres répertoires et fichiers publics
 Allow: /
 
-# Fournir l'emplacement du sitemap
+Sitemap: https://desktop.peur-de-la-conduite.fr/sitemap.xml
 Sitemap: https://mobile.peur-de-la-conduite.fr/sitemap.xml
