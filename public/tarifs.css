@@ -91,6 +91,33 @@
         min-width: 330px;
     }
 }
+@media screen and (max-width: 370px) {
+    .container {
+        padding: inherit;
+    }
+    .category {
+        padding: 16px 8px;
+        min-width: 330px;
+        max-width: 350px;
+
+        margin: 0 auto;
+    }
+    .packs-container {
+    }
+    .price-card,
+    .price-title {
+        width: calc(100% - 20px);
+        min-width: 340px !important;
+        max-width: 340px !important;
+        /* background: red !important; */
+        position: relative;
+    }
+
+    .coach2 h3 {
+        position: relative;
+        font-size: 18px !important;
+    }
+}
 .price-card,
 .price-title {
     width: calc(100% - 10px);

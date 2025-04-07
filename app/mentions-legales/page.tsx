@@ -4,7 +4,6 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-    // await new Promise((r) => setTimeout(r, 1000));
     return (
         <section className="section" id="s1">
             <div className="fixed-menu"></div>

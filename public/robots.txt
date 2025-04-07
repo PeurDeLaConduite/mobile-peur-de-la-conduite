@@ -1,25 +1,27 @@
-# robots.txt pour peur-de-la-conduite.fr/
-
-# Autoriser tous les robots d'exploration
 User-agent: *
-Disallow: /amplify/       # Bloque l'accès au dossier amplify
-Disallow: /src/           # Bloque l'accès au dossier src
-Disallow: /utils/         # Bloque l'accès aux utilitaires
-Disallow: /app/fonts/     # Bloque l'accès aux fichiers de polices
-Disallow: /public/css/    # Bloque l'accès aux fichiers CSS
+Disallow: /amplify/
+Disallow: /src/
+Disallow: /utils/
+Disallow: /app/fonts/
+Disallow: /public/css/
 
-# Exclure les pages d'erreur, de chargement ou autres éléments spécifiques
-Disallow: /app/blog/error
-Disallow: /app/reservation/error
-Disallow: /app/informations-legales/error
-Disallow: /app/mentions-legales/error
+# Bloquer uniquement les pages sans contenu
+Disallow: /blog
+Disallow: /reservation
+Disallow: /mentions-legales
+Disallow: /informations-legales
+
+# Bloquer la page search sur la version mobile
+Disallow: /search
+
+# Optionnel : blocage d'états transitoires (chargement, erreur)
 Disallow: /*/loading
+Disallow: /*/error
 
-# Permettre l'accès à tous les autres répertoires et fichiers publics
 Allow: /
 
-# Autoriser l'accès aux fichiers dans _next/static/ nécessaires au rendu
-Allow: /_next/static/
-
-# Fournir l'emplacement du sitemap
+# Inclure le sitemap de la version mobile
 Sitemap: https://mobile.peur-de-la-conduite.fr/sitemap.xml
+
+# Inclure le sitemap de la version desktop (si nécessaire, selon ton approche)
+Sitemap: https://desktop.peur-de-la-conduite.fr/sitemap.xml

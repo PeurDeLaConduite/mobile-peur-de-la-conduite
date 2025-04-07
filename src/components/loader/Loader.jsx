@@ -6,11 +6,15 @@ const Loader = () => {
         <div className="loader">
             <div className="ld-circleBG"></div>
             <div className="ld-frame">
-                <img src="/img/retroviseur.svg" alt="loader" />
-                <div className="ld-dot2"></div>
-                <div className="ld-dot1"></div>
-                <div className="ld-dot"></div>
-            </div>
+                <img src="/img/retroviseur.svg" alt="loader" />{" "}
+                <span className="ld-dot2"></span>
+                <span className="ld-dot1"></span>
+                <span className="ld-dot"></span>
+            </div>{" "}
+            <p>
+                Cette section n’est pas encore disponible. Merci de votre
+                patience
+            </p>
         </div>
     );
 };

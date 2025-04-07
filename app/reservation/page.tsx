@@ -1,4 +1,3 @@
-import Space from "../../src/utils/Space";
 import Loader from "../../src/components/loader/Loader";
 import { Metadata } from "next";
 export const metadata: Metadata = {
@@ -11,10 +10,10 @@ export default async function Page() {
         <section className="section" id="hs">
             <div className="fixed-menu"></div>
             <h2>Réservation</h2>
-            <p>
+            {/* <p>
                 Cette section n’est pas encore disponible. <Space />
                 Merci de votre patience
-            </p>
+            </p> */}
             <Loader />
         </section>
     );
