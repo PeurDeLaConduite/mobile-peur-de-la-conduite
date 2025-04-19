@@ -91,6 +91,65 @@ export default function RootLayout({
                     href="./tarifs.css"
                     fetchPriority="high"
                 />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "ProfessionalService",
+                        "@id": "https://www.peur-de-la-conduite.fr/",
+                        "name": "Peur de la conduite - Coaching Auto",
+                        "image": [
+                            "https://www.peur-de-la-conduite.fr/img/about/avatar.svg"
+                        ],
+                        "url": "https://www.peur-de-la-conduite.fr/",
+                        "telephone": "+33 6 74 25 91 81",
+                        "email": "contact.peurdelaconduite@gmail.com",
+                        "description": "Coaching individuel pour surmonter l'amaxophobie, gérer le stress, réussir l'examen de conduite ou reprendre confiance au volant.",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "17 Allée Didier Daurat",
+                            "addressLocality": "Le Havre",
+                            "addressRegion": "Normandie",
+                            "postalCode": "76620",
+                            "addressCountry": "FR"
+                        },
+                        "geo": {
+                            "@type": "GeoCoordinates",
+                            "latitude": "49.5051",
+                            "longitude": "0.1604"
+                        },
+                        "openingHoursSpecification": [
+                            {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": [
+                                "Monday",
+                                "Tuesday",
+                                "Wednesday",
+                                "Thursday",
+                                "Friday",
+                                "Saturday",
+                                "Sunday"
+                            ],
+                            "opens": "07:00",
+                            "closes": "20:00"
+                            }
+                        ],
+                        "sameAs": [
+                            "http://www.youtube.com/@MounirBouakkaz-r4i",
+                            "https://wa.me/33674259181",
+                            "https://www.tiktok.com/@peur.de.la.condui?_t=ZN-8taHCRDnmnH&_r=1",
+                            "https://www.instagram.com/peurdelaconduite.fr/",
+                            "https://www.facebook.com/profile.php?id=61567260421073",
+                            "https://www.linkedin.com/in/mounir-bouakkaz"
+                        ],
+                        "founder": {
+                            "@type": "Person",
+                            "name": "Mounir Bouakkaz"
+                        }
+                        })
+                    }}
+                />
             </head>
             <body id="top">
                     <ClientLayout>
