@@ -11,7 +11,7 @@ const SliderCTA = () => {
                 <p className="p2">{sliderInfo[2].info}</p>
             </div>
             {menuItems.mainLink?.[4] && (
-                <ButtonLink href={menuItems.mainLink[4].path}>
+                <ButtonLink href={menuItems.mainLink[4].path + "#ctc-form"}>
                     {sliderInfo[3].info}
                 </ButtonLink>
             )}
