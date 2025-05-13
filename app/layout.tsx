@@ -89,7 +89,7 @@ export default function RootLayout({
                 <link
                     rel="stylesheet"
                     href="./tarifs.css"
-                    fetchPriority="high"
+                    fetchPriority="low"
                 />
                 <script
                     type="application/ld+json"

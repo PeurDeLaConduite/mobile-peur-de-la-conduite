@@ -2,19 +2,13 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "informations-legales",
 };
-
+import PrivacyPolicy from "../../src/components/PrivacyPolicy";
 export default async function Page() {
     return (
         <section className="section" id="s1">
             <div className="fixed-menu"></div>
-            <h2>informations-legales</h2>
             <div className="s1">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Velit aliquid provident magnam, delectus nobis est sunt iste
-                    aut at error assumenda voluptas, harum sed consequuntur
-                    voluptate soluta deleniti voluptatum consequatur.
-                </p>
+                <PrivacyPolicy />
             </div>
         </section>
     );
