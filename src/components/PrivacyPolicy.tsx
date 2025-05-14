@@ -1,14 +1,16 @@
 import React from "react";
-
+import ButtonLink from "./button/ButtonLink";
 const PrivacyPolicy = () => {
     return (
         <div className="pp_politique-container">
-            <h1 className="pp_title">Politique de Confidentialité</h1>
+            <h2 className="pp_title" id="privacy-policy">
+                Politique de Confidentialité
+            </h2>
 
-            <section>
-                <h2 className="pp_section-title">
+            <section className="pp">
+                <h3 className="pp_section-title">
                     🔒 Aucune transmission à des tiers
-                </h2>
+                </h3>
                 <p>
                     Les informations que vous renseignez (nom, prénom, email,
                     téléphone, etc.){" "}
@@ -20,8 +22,8 @@ const PrivacyPolicy = () => {
                 </p>
             </section>
 
-            <section>
-                <h2 className="pp_section-title">🔐 Sécurité maximale</h2>
+            <section className="pp">
+                <h3 className="pp_section-title">🔐 Sécurité maximale</h3>
                 <p>
                     Vos données sont stockées de manière sécurisée avec des
                     mesures techniques et organisationnelles destinées à{" "}
@@ -29,13 +31,15 @@ const PrivacyPolicy = () => {
                 </p>
             </section>
 
-            <section>
-                <h2 className="pp_section-title">✅ Consentement clair</h2>
+            <section className="pp">
+                <h3 className="pp_section-title">✅ Consentement clair</h3>
                 <ul className="pp_list">
                     <li>
                         En cochant la case{" "}
                         <em>
-                            "J'ai lu et accepté les conditions d'utilisation"
+                            <strong>
+                                {`"J'ai lu et accepté les conditions d'utilisation"`}
+                            </strong>
                         </em>
                         , vous acceptez notre politique de confidentialité.
                     </li>
@@ -46,11 +50,10 @@ const PrivacyPolicy = () => {
                         explicite.
                     </li>
                 </ul>
-                <p></p>
             </section>
 
-            <section>
-                <h2 className="pp_section-title">📬 Vos droits</h2>
+            <section className="pp">
+                <h3 className="pp_section-title">📬 Vos droits</h3>
                 <p>
                     Vous pouvez à tout moment demander la{" "}
                     <strong>modification ou la suppression</strong> de vos
@@ -58,6 +61,7 @@ const PrivacyPolicy = () => {
                     effet.
                 </p>
             </section>
+            <ButtonLink href={"/contact"}>Contact</ButtonLink>
         </div>
     );
 };
