@@ -12,7 +12,7 @@ export default function Page() {
             <div className="container">
                 <div className="page-title">
                     <Tarifs />
-                    <h1 className="title">Tarifs des Prestations</h1>
+                    <h1 className="title">Nos Tarifs</h1>
                 </div>
 
                 {Object.values(servicesData).map((category) => (

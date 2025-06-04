@@ -10,11 +10,7 @@ const Loader = () => {
                 <span className="ld-dot2"></span>
                 <span className="ld-dot1"></span>
                 <span className="ld-dot"></span>
-            </div>{" "}
-            <p>
-                Cette section n’est pas encore disponible. Merci de votre
-                patience
-            </p>
+            </div>
         </div>
     );
 };
