@@ -10,7 +10,7 @@ export default function Page() {
         <section className="section page" id="services-page">
             <div className="fixed-menu"></div>
             <div className="container">
-                <div className="page-title">
+                <div className="page-tle">
                     <Services />
                     <h1 className="title">Nos Services</h1>
                 </div>
@@ -19,7 +19,7 @@ export default function Page() {
                         <div id={category.ref}>
                             <div className="fixed-menu"></div>
                             <section className="category">
-                                <h2 className="category-title">
+                                <h2 className="category-tle">
                                     {category.title}
                                 </h2>
                                 <p className="category-intro">
@@ -29,11 +29,11 @@ export default function Page() {
                                 {category.services.map((service, index) => (
                                     <article
                                         key={index + "trf"}
-                                        className="packs-container"
+                                        className="pck-Ct"
                                         id={service.id}
                                     >
                                         <div className="margin-srv"></div>
-                                        <div className="srvP_card-title">
+                                        <div className="srvP_C-tle">
                                             <div className="srvP-img">
                                                 <img
                                                     src={service.imgSrc}
@@ -54,7 +54,7 @@ export default function Page() {
                                                     height={25}
                                                 />
                                             </div>
-                                            <p className="service-description">
+                                            <p className="srv-desrib">
                                                 {service.description}
                                             </p>
                                         </div>

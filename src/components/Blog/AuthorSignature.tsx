@@ -25,11 +25,11 @@ const AuthorSignature: React.FC<AuthorSignatureProps> = ({
     date,
     className = "",
 }) => (
-    <div className={`post-author__meta ${className}`.trim()}>
-        <div className="post-author__info">
-            <span className="post-author__author">{author.name}</span>
+    <div className={`pst-a__meta ${className}`.trim()}>
+        <div className="pst-a__info">
+            <span className="pst-a_aut">{author.name}</span>
             <time
-                className="post-author__date"
+                className="pst-a_dt"
                 dateTime={
                     typeof date === "string"
                         ? date
@@ -39,15 +39,15 @@ const AuthorSignature: React.FC<AuthorSignatureProps> = ({
                 {formatDate(date)}
             </time>
         </div>
-        <div className="avatar">
+        <div className="avat">
             <img
                 src={author.avatar}
-                alt={`Avatar de ${author.name}`}
+                alt={`avatar de ${author.name}`}
                 className="av  shadow"
             />
             <img
                 src={author.avatar}
-                alt={`Avatar de ${author.name}`}
+                alt={`avat de ${author.name}`}
                 className="av "
             />
         </div>

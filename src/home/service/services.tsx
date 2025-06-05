@@ -10,9 +10,9 @@ const Services: React.FC = () => {
     return (
         <>
             <div className="services content-wrapper">
-                <div className="segment">
+                <div className="sgm">
                     <h2 className="card_title">Services</h2>
-                    <div className="card_header flx-c">
+                    <div className="card_H flx-c">
                         <Image
                             className="srv-img_typo"
                             src="/img/services/TYPO-LOGO.svg"
@@ -31,7 +31,7 @@ const Services: React.FC = () => {
                         />
                     </div>
 
-                    <div className="card_content">
+                    <div className="card_cnt">
                         <p
                             dangerouslySetInnerHTML={{
                                 __html: serviceContent[0].description,

@@ -10,7 +10,7 @@ export default function Page() {
         <section className="section page" id="prices">
             <div className="fixed-menu"></div>
             <div className="container">
-                <div className="page-title">
+                <div className="page-tle">
                     <Tarifs />
                     <h1 className="title">Nos Tarifs</h1>
                 </div>
@@ -19,18 +19,15 @@ export default function Page() {
                     <React.Fragment key={category.id}>
                         <div className="fixed-menu"></div>
                         <section className="category" id={category.ref}>
-                            <h2 className="category-title">{category.title}</h2>
+                            <h2 className="category-tle">{category.title}</h2>
                             <p className="category-intro">{category.intro}</p>
 
                             {category.services.map((service, index) => (
-                                <div
-                                    className="packs-container"
-                                    key={index + "trf"}
-                                >
-                                    <div className="price-title">
+                                <div className="pck-Ct" key={index + "trf"}>
+                                    <div className="price-tle">
                                         <div className="coach">
                                             <p>Coaching</p>
-                                            <div className="service-image">
+                                            <div className="srv-image">
                                                 <img
                                                     src={service.imgSrc}
                                                     alt={service.imgAlt}
@@ -44,7 +41,7 @@ export default function Page() {
                                         </div>
                                     </div>
                                     <div className="price-card">
-                                        <table className="price-table">
+                                        <table className="price-tbl">
                                             <thead>
                                                 <tr>
                                                     <th>Nb de Séances</th>

@@ -1,7 +1,7 @@
 @import "../../home/service/questionaire";
 @import "../../home/service/beginner/beginner";
 .services {
-    .segment {
+    .sgm {
         flex-flow: column nowrap;
         background: $primary-blue;
         margin: 0;
@@ -16,7 +16,7 @@
             width: 100%;
             align-self: flex-start;
         }
-        .card_header {
+        .card_H {
             margin: 1rem 1rem 2.5rem 2rem;
             padding: 1rem;
             width: 75%;
@@ -25,7 +25,7 @@
             box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
             border-radius: 1.5rem;
             img.srv-img_typo {
-                width: $width-card_header;
+                width: $width-card_H;
                 padding: 0.5rem 0.5rem 0.5rem 0.5rem;
             }
 
@@ -34,7 +34,7 @@
             }
         }
 
-        .card_content {
+        .card_cnt {
             height: calc(360px + 82px);
             height: auto;
             padding: 1rem 0.5rem 0 2rem;
@@ -62,7 +62,7 @@
             margin: 0;
             border-radius: 0 0 45px 45px;
 
-            .card_content {
+            .card_cnt {
                 max-height: 121px;
             }
 

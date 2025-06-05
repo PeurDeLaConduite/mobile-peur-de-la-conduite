@@ -75,7 +75,7 @@ option {
     border-radius: 45px 0px 45px 45px;
     background: $white;
 }
-.segment {
+.sgm {
     width: calc(100% - 2rem);
     height: auto;
     display: flex;
@@ -84,9 +84,9 @@ option {
     column-gap: calc(42px);
     position: relative;
     margin: 0 auto;
-    .card_header,
+    .card_H,
     .card_empty {
-        // width: calc($width-card_header + 42px + 42px);
+        // width: calc($width-card_H + 42px + 42px);
         flex-flow: column nowrap;
         // padding: 40px 42px 42px 42px;
         display: flex;
@@ -95,7 +95,7 @@ option {
         border-radius: 45px;
     }
 
-    .card_content,
+    .card_cnt,
     .srv-description {
         display: flex;
         flex-flow: column nowrap;

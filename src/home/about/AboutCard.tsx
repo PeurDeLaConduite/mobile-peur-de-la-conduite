@@ -4,8 +4,8 @@ import ButtonLink from "../../components/button/ButtonLink";
 
 const AboutCard = ({ cardIdentity, cardContent }) => {
     return (
-        <div className="segment">
-            <div className="card_header flx-c">
+        <div className="sgm">
+            <div className="card_H flx-c">
                 <h3>
                     {cardIdentity.firstName}
                     <span>{cardIdentity.name}</span>
@@ -13,14 +13,14 @@ const AboutCard = ({ cardIdentity, cardContent }) => {
                 <Image
                     className="ab-img_head"
                     src="/img/about/avatar.webp"
-                    alt={`Avatar de ${cardIdentity.firstName}`}
+                    alt={`avatar de ${cardIdentity.firstName}`}
                     width={225}
                     height={225}
                     priority={false}
                 />
                 <p className="profession">{cardIdentity.profession}</p>
             </div>
-            <div className="card_content">
+            <div className="card_cnt">
                 {cardContent.description.map((line, i) => (
                     <p
                         key={i + "ab"}

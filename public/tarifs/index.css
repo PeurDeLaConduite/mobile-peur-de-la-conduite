@@ -17,13 +17,13 @@
     position: relative;
     z-index: 1;
 }
-.container .packs .packs-container {
+.container .packs .pck-Ct {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 10px;
 }
-.container .packs .packs-container .price-card {
+.container .packs .pck-Ct .price-card {
     width: 100%;
     max-width: 400px;
     background: #fff;
@@ -32,23 +32,23 @@
     padding: 20px 10px;
     margin-bottom: 20px;
 }
-.container .packs .packs-container .price-card .price-title {
+.container .packs .pck-Ct .price-card .price-tle {
     font-size: 1.5rem;
     font-weight: 700;
     color: #0152c3;
     margin: 10px;
 }
-.container .packs .packs-container .price-card .price-title span {
+.container .packs .pck-Ct .price-card .price-tle span {
     margin: 0 0 20px;
     text-align: left;
     display: block;
 }
-.container .packs .packs-container .price-card .price-table {
+.container .packs .pck-Ct .price-card .price-tbl {
     width: 100%;
     border-collapse: collapse;
 }
-.container .packs .packs-container .price-card .price-table .nb-sessions,
-.container .packs .packs-container .price-card .price-table thead {
+.container .packs .pck-Ct .price-card .price-tbl .nb-sessions,
+.container .packs .pck-Ct .price-card .price-tbl thead {
     color: #fff;
     background-color: #1a6de5;
     left: 0;
@@ -76,11 +76,11 @@
     color: #444;
     margin-bottom: 10px;
 }
-.price-table td,
-.price-table th {
+.price-tbl td,
+.price-tbl th {
     padding: 10px;
     text-align: center;
 }
-.price-table tr {
+.price-tbl tr {
     border-bottom: 1px solid #ddd;
 }

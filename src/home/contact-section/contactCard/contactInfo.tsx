@@ -42,7 +42,7 @@ const ContactInfo = () => {
                     )}
                 </React.Fragment>
             ))}
-            <div className="ctc-social_card">
+            <div className="ctc-social_C">
                 <p>Nous suivre</p>
                 <SocialLinks />
             </div>

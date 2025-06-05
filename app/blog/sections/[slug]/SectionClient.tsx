@@ -22,13 +22,13 @@ export default function SectionClient({ section, posts, authors }: Props) {
     );
 
     return (
-        <div className="section-page section-card">
-            <div className="section-card-header">
-                <h1 className="section-card-title">{section.title}</h1>
-                <p className="section-card-desc">{section.description}</p>
+        <div className="sct-P sct-C">
+            <div className="sct-C-hd">
+                <h1 className="sct-C-tle">{section.title}</h1>
+                <p className="sct-C-desc">{section.description}</p>
             </div>
             <div className="section-blog_bg">
-                <div className="section-page__posts">
+                <div className="sct-P__posts">
                     {postsInSection.map((post) => {
                         const author = authors.find(
                             (a) => a.id === post.authorId

@@ -1,10 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-
 const ContactFormTitle = () => {
     return (
-        <div className="form-title flx-c">
+        <div className="form-tle flx-c">
             <h2>Contact</h2>
             <Image
                 src="/img/contact/icon/key.svg"

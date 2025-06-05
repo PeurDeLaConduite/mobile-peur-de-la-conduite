@@ -1,6 +1,6 @@
-import ServiceCategory from "../Component/ServiceCategory";
+import Servicecategory from "../Component/Servicecategory";
 import { servicesData } from "../Component/servicesData";
 
-const Confirmed = () => <ServiceCategory {...servicesData.confirmed} />;
+const Confirmed = () => <Servicecategory {...servicesData.confirmed} />;
 
 export default Confirmed;

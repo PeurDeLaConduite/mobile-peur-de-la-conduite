@@ -10,7 +10,7 @@ interface MarkdownRendererProps {
 
 export default function MarkdownRenderer({ children }: MarkdownRendererProps) {
     return (
-        <div className="markdown-container">
+        <div className="md-c">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
                 {children}
             </ReactMarkdown>

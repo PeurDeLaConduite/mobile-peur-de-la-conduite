@@ -94,7 +94,7 @@ body * {
     box-sizing: border-box;
 }
 
-.btn-style_blue,
+.btn-SB,
 .logo,
 .sld-bg {
     z-index: 1;
@@ -159,7 +159,7 @@ textarea {
     text-transform: none;
 }
 
-.btn-style_blue,
+.btn-SB,
 p {
     font-size: 1.25rem;
 }
@@ -272,10 +272,10 @@ textarea {
     border: 0;
 }
 
-.btn-style_blue,
+.btn-SB,
 .header button.menu,
 .logo,
-.segment,
+.sgm,
 .slider-bg {
     position: relative;
 }
@@ -309,7 +309,7 @@ textarea {
     z-index: 2;
 }
 
-.segment {
+.sgm {
     width: calc(100% - 2rem);
     height: auto;
     display: flex;
@@ -324,23 +324,23 @@ textarea {
     width: 100%;
 }
 
-.segment .card_empty,
-.segment .card_header {
+.sgm .card_empty,
+.sgm .card_H {
     flex-flow: column nowrap;
     display: flex;
     border-radius: 45px;
 }
 
-.segment .card_content,
-.segment .srv-description {
+.sgm .card_cnt,
+.sgm .srv-description {
     display: flex;
     flex-flow: column nowrap;
     align-content: space-between;
     justify-content: space-between;
 }
 
-.segment .card_content p,
-.segment .srv-description p {
+.sgm .card_cnt p,
+.sgm .srv-description p {
     padding: 0;
     margin: 0;
 }
@@ -546,8 +546,8 @@ p.p-info_ctn {
     transform: none !important;
 }
 
-.about .segment .card_header h3,
-.services .segment .card_header h3,
+.about .sgm .card_H h3,
+.services .sgm .card_H h3,
 .sld-CTA p,
 p.p-info_ctn {
     font-family: Montserrat, sans-serif;

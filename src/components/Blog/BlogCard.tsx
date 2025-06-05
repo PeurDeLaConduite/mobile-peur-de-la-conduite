@@ -48,7 +48,7 @@ function BlogCard({
 
     return (
         <article
-            className={`blog-card${hovered ? " cardHovered" : ""}${
+            className={`blg-C${hovered ? " cardHovered" : ""}${
                 faded ? " cardFaded" : ""
             }`}
             aria-label={`Voir l'article : ${post.title}`}
@@ -61,25 +61,25 @@ function BlogCard({
             onBlur={onBlur}
             tabIndex={0}
         >
-            <div className="blog-card__header">
-                <h3 className="blog-card__title">
+            <div className="blg-C__H">
+                <h3 className="bl-c_tle">
                     <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </h3>
-                {/* <div className="blog-card__content"> */}
-                    <p className="blog-card__excerpt">{post.excerpt}</p>
-                    {post.videoUrl && (
-                        <div className="blog-card__video">
-                            <VideoEmbed
-                                url={post.videoUrl}
-                                title={`Vidéo de ${post.title}`}
-                                iframeAllow={false}
-                                iframeTabIndex={-1}
-                            />
-                        </div>
-                    )}
+                {/* <div className="blg-C__cnt"> */}
+                <p className="blg-C__excerpt">{post.excerpt}</p>
+                {post.videoUrl && (
+                    <div className="blg-C_V">
+                        <VideoEmbed
+                            url={post.videoUrl}
+                            title={`Vidéo de ${post.title}`}
+                            iframeAllow={false}
+                            iframeTabIndex={-1}
+                        />
+                    </div>
+                )}
                 {/* </div> */}
-                <div className="blog-card__footer">
-                    <div className="blog-card__link">
+                <div className="blg-C__footer">
+                    <div className="blg-C__link">
                         <ButtonLink href={`/blog/${post.slug}`}>
                             Lire l&apos;article
                         </ButtonLink>

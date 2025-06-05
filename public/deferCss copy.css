@@ -88,13 +88,13 @@ option {
     width: 100%;
 }
 
-.about .segment,
-.services .segment {
+.about .sgm,
+.services .sgm {
     margin-top: 2.6rem;
 }
 
-.about .segment .card_header,
-.services .segment .card_header {
+.about .sgm .card_H,
+.services .sgm .card_H {
     position: relative;
     z-index: 2;
     padding: 0;
@@ -104,8 +104,8 @@ option {
     height: 310px;
 }
 
-.about .segment .card_header h3,
-.services .segment .card_header h3 {
+.about .sgm .card_H h3,
+.services .sgm .card_H h3 {
     font-size: 1.5rem;
     color: var(--w);
     text-shadow: 0 4px 4px var(--bkR025);
@@ -116,14 +116,14 @@ option {
     text-align: center;
 }
 
-.about .segment .card_header h3 span,
-.services .segment .card_header h3 span {
+.about .sgm .card_H h3 span,
+.services .sgm .card_H h3 span {
     font-weight: 500;
     margin-left: 0.5rem;
 }
 
-.about .segment .card_header .profession,
-.services .segment .card_header .profession {
+.about .sgm .card_H .profession,
+.services .sgm .card_H .profession {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: -1.12px;
@@ -133,24 +133,24 @@ option {
     text-align: center;
 }
 
-.about .segment .card_header img.ab-img_head,
-.services .segment .card_header img.ab-img_head {
+.about .sgm .card_H img.ab-img_head,
+.services .sgm .card_H img.ab-img_head {
     margin: 6px;
     border-radius: 48px;
     width: 225px;
     height: 225px;
 }
 
-.about .segment .card_content,
-.services .segment .card_content {
+.about .sgm .card_cnt,
+.services .sgm .card_cnt {
     height: auto;
     width: 100%;
     gap: 24px;
     padding: 2rem 0 0;
 }
 
-.about .segment .card_content p,
-.services .segment .card_content p {
+.about .sgm .card_cnt p,
+.services .sgm .card_cnt p {
     max-width: inherit;
     width: 100%;
     padding: 0 1rem 0 0;
@@ -159,8 +159,8 @@ option {
     color: var(--bk2);
 }
 
-.about .btn-style_blue,
-.services .btn-style_blue {
+.about .btn-SB,
+.services .btn-SB {
     margin: 3.5rem 1.5rem 0 0;
     align-self: center;
 }
@@ -422,7 +422,7 @@ nav .group_link-submenu:focus-visible .submenu {
     }
 }
 
-.btn-style_blue {
+.btn-SB {
     border-radius: 8px;
     padding: 0.75rem 2rem;
     height: 44px;
@@ -434,8 +434,8 @@ nav .group_link-submenu:focus-visible .submenu {
     min-width: 160px;
 }
 
-.btn-style_blue,
-.btn-style_blue a {
+.btn-SB,
+.btn-SB a {
     font-family: Nunito, serif;
     color: var(--w);
     font-style: normal;
@@ -444,20 +444,20 @@ nav .group_link-submenu:focus-visible .submenu {
     text-align: center;
 }
 
-.btn-style_blue:hover {
+.btn-SB:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px var(--bl1R05); /* couleur existante, pas de variable pour 0 6 20 */
 }
 
-.btn-style_blue:active {
+.btn-SB:active {
     transform: scale(0.98);
 }
 
-.btn-style_blue:hover:after {
+.btn-SB:hover:after {
     opacity: 1;
 }
 
-.btn-style_blue:after {
+.btn-SB:after {
     content: "";
     position: absolute;
     inset: 0;
@@ -516,7 +516,7 @@ nav .group_link-submenu:focus-visible .submenu {
     z-index: 1;
 }
 
-.services .segment .accompanist-bg {
+.services .sgm .accompanist-bg {
     position: relative;
     top: -42px;
     background: var(--w);
@@ -526,12 +526,12 @@ nav .group_link-submenu:focus-visible .submenu {
     border-radius: 0 0 45px 45px;
 }
 
-.services .segment .accompanist-bg .card_content {
+.services .sgm .accompanist-bg .card_cnt {
     max-height: 121px;
 }
 
-.services .segment .accompanist-bg .isAccompanist,
-.services .segment .accompanist-bg .isAccompanist p {
+.services .sgm .accompanist-bg .isAccompanist,
+.services .sgm .accompanist-bg .isAccompanist p {
     padding-top: 0;
 }
 
@@ -605,43 +605,43 @@ form.srv-form label {
     margin-top: 60px;
 }
 
-.services.content-srv .segment {
+.services.content-srv .sgm {
     margin: 0;
     width: 100%;
 }
 
-.services.content-srv .segment-title {
+.services.content-srv .sgm-tle {
     padding: 0.5rem;
     align-items: flex-start;
     text-align: left;
     width: 100%;
 }
 
-.services.content-srv .segment-title h2.card_title {
+.services.content-srv .sgm-tle h2.card_title {
     font-size: 1.375rem;
     padding: 1rem 0.5rem 0.5rem;
     margin: 0;
 }
 
-.services.content-srv .segment .card_header {
+.services.content-srv .sgm .card_H {
     margin: 0.5rem 1rem 2rem;
     width: 100%;
     width: calc(100% - 2rem);
     border-radius: 0.5rem;
 }
 
-.services.content-srv .segment .card_header p {
+.services.content-srv .sgm .card_H p {
     text-align: left;
     font-size: 1.135rem;
     color: var(--bk2);
 }
 
-.services.content-srv .segment .card_content {
+.services.content-srv .sgm .card_cnt {
     width: 100%;
     padding: 0;
 }
 
-.services.content-srv .segment .card_content .srv-description {
+.services.content-srv .sgm .card_cnt .srv-description {
     padding: 0;
     margin: 0 1.5rem;
     align-items: center;
@@ -653,7 +653,7 @@ form.srv-form label {
     flex-flow: row-reverse;
 }
 
-.services.content-srv .segment .card_content .srv-description a {
+.services.content-srv .sgm .card_cnt .srv-description a {
     font-weight: 600;
     font-size: 1.25rem;
     color: var(--bk2);
@@ -661,11 +661,7 @@ form.srv-form label {
     margin-left: 1rem;
 }
 
-.services.content-srv
-    .segment
-    .card_content
-    .srv-description
-    .icon-description {
+.services.content-srv .sgm .card_cnt .srv-description .icon-description {
     position: relative;
     border-radius: 50%;
     background: var(--w);
@@ -694,19 +690,14 @@ form.srv-form label {
 .boolean-checkbox span {
     z-index: -1;
 }
-.services.content-srv
-    .segment
-    .card_content
-    .srv-description
-    .icon-description
-    img {
+.services.content-srv .sgm .card_cnt .srv-description .icon-description img {
     border-radius: 50%;
     background: var(--w);
     position: absolute;
     width: 100%;
     height: 100%;
 }
-.services.content-srv .segment .card_content .srv-description.o1 {
+.services.content-srv .sgm .card_cnt .srv-description.o1 {
     border-radius: 0;
     background: var(--ol);
     width: 100%;
@@ -717,7 +708,7 @@ form.srv-form label {
     gap: 1rem;
     height: auto;
 }
-.services.content-srv .segment .card_content .srv-description.o1 p {
+.services.content-srv .sgm .card_cnt .srv-description.o1 p {
     font-size: 1.375rem;
     font-weight: 600;
     text-shadow: var(--S_444) var(--bkR025);
@@ -727,34 +718,25 @@ form.srv-form label {
     padding: 0;
     text-align: left;
 }
-.services.content-srv
-    .segment
-    .card_content
-    .srv-description.o1
-    .icon-description {
+.services.content-srv .sgm .card_cnt .srv-description.o1 .icon-description {
     border: none;
     min-width: inherit;
     height: auto;
     filter: drop-shadow(var(--S_444) var(--bkR025));
 }
-.services.content-srv
-    .segment
-    .card_content
-    .srv-description.o1
-    .icon-description
-    img {
+.services.content-srv .sgm .card_cnt .srv-description.o1 .icon-description img {
     background: 0 0;
     border-radius: 0;
     width: 45px;
     height: 45px;
 }
-.services .segment {
+.services .sgm {
     flex-flow: column nowrap;
     background: var(--bl1);
     margin: 0;
     width: 100%;
 }
-.services .segment h2.card_title {
+.services .sgm h2.card_title {
     justify-content: flex-start;
     color: var(--w);
     text-shadow: var(--S_044) var(--bkR025);
@@ -763,7 +745,7 @@ form.srv-form label {
     width: 100%;
     align-self: flex-start;
 }
-.services .segment .card_header {
+.services .sgm .card_H {
     margin: 1rem 1rem 2.5rem 2rem;
     padding: 1rem;
     width: 75%;
@@ -772,27 +754,27 @@ form.srv-form label {
     box-shadow: var(--S_246) var(--bkR025);
     border-radius: 1.5rem;
 }
-.services .segment .card_header img.srv-img_typo {
+.services .sgm .card_H img.srv-img_typo {
     width: 360px;
     padding: 0.5rem;
 }
 .form label:first-of-type,
-.services .segment .card_header img.srv-img_lesson {
+.services .sgm .card_H img.srv-img_lesson {
     margin-top: 12px;
 }
-.services .segment .card_content {
+.services .sgm .card_cnt {
     height: auto;
     padding: 1rem 0.5rem 0 2rem;
     background: var(--w);
     border-radius: 0;
 }
-.services .segment .card_content p {
+.services .sgm .card_cnt p {
     padding-bottom: 14px;
 }
-.services .segment .card_content p strong:first-child {
+.services .sgm .card_cnt p strong:first-child {
     font-size: 1.375rem;
 }
-.services .segment .card_content p.srv-ask {
+.services .sgm .card_cnt p.srv-ask {
     font-weight: bolder;
 }
 .contact {
@@ -851,7 +833,7 @@ form.srv-form label {
 }
 .contact .ctc-announcement p,
 .contact .ctc-card p,
-.contact .ctc-social_card p {
+.contact .ctc-social_C p {
     width: 100%;
     font-family: Montserrat, sans-serif;
     font-size: 1.25rem;
@@ -872,7 +854,7 @@ form.srv-form label {
     grid-auto-flow: dense;
 }
 .contact .ctc-card,
-.contact .ctc-social_card {
+.contact .ctc-social_C {
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -888,16 +870,16 @@ form.srv-form label {
     text-align: center;
 }
 .contact .ctc-card img,
-.contact .ctc-social_card img {
+.contact .ctc-social_C img {
     width: 40px;
     height: 40px;
     margin-bottom: 15px;
 }
-.contact .ctc-social_card {
+.contact .ctc-social_C {
     display: flex;
     flex-flow: column wrap;
 }
-.contact .ctc-social_card p {
+.contact .ctc-social_C p {
     width: 100%;
     text-align: left;
     margin-bottom: 1rem;
@@ -952,7 +934,7 @@ form.srv-form label {
 .footer .ft_p-1 {
     height: fit-content;
 }
-.ctc-layout .ctc-form .form-title {
+.ctc-layout .ctc-form .form-tle {
     width: 100%;
     height: auto;
     gap: 20px;
@@ -1145,7 +1127,7 @@ h2.pp_title {
     text-align: center;
     color: var(--bk);
 }
-.pp_section-title {
+.pp_section-tle {
     font-weight: 600;
     margin-bottom: 10px;
 }

@@ -55,7 +55,7 @@ const VideoEmbed: React.FC<Props> = ({
     if (ytId) {
         return (
             <div
-                className={`video-embed${isShort ? " video-embed--short" : ""}`}
+                className={`vid-M${isShort ? " vid-M--short" : ""}`}
                 style={{ position: "relative" }}
             >
                 {!iframeLoaded && (

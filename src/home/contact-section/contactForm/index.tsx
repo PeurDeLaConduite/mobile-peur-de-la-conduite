@@ -90,7 +90,12 @@ const ContactForm = () => {
     };
 
     return (
-        <form className="ctc-form" method="POST" onSubmit={handleSubmit} id="ctc-form">
+        <form
+            className="ctc-form"
+            method="POST"
+            onSubmit={handleSubmit}
+            id="ctc-form"
+        >
             <ContactFormTitle />
             <ContactQuestions />
             <Form
@@ -110,7 +115,7 @@ const ContactForm = () => {
             <div className="endOF">
                 <button
                     type="submit"
-                    className="btn-style_blue flx-c"
+                    className="btn-SB flx-c"
                     disabled={state.submitting}
                 >
                     {state.submitting ? "Envoi en cours..." : "En voiture !"}

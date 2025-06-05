@@ -2,11 +2,11 @@
     margin-top: 60px;
     // padding: 0 1rem;
 
-    .segment {
+    .sgm {
         margin: 0;
         width: 100%;
 
-        &-title {
+        &-tle {
             padding: 0.5rem;
             align-items: flex-start;
             text-align: center;
@@ -19,7 +19,7 @@
             }
         }
 
-        .card_header {
+        .card_H {
             margin: 0.5rem 1rem 2rem 1rem;
             width: 100%;
             width: calc(100% - 2rem);
@@ -31,7 +31,7 @@
             }
         }
 
-        .card_content {
+        .card_cnt {
             width: 100%;
             padding: 0rem;
             .srv-description {
@@ -123,15 +123,15 @@
 
     // Media queries pour mobile
     @media (max-width: 768px) {
-        .segment-title h2.card_title {
+        .sgm-tle h2.card_title {
             font-size: 1.25rem;
         }
 
-        .card_header {
+        .card_H {
             padding: 0.5rem;
         }
 
-        .card_content {
+        .card_cnt {
             border-radius: 0;
         }
 

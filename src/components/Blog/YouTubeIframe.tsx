@@ -18,7 +18,7 @@ export default function YouTubeIframe({
 }: Props) {
     return (
         <iframe
-            className="video-embed__iframe"
+            className="vid-M__iframe"
             src={`https://www.youtube.com/embed/${ytId}?playsinline=1`}
             {...(iframeAllow !== false ? { allow: iframeAllow } : {})}
             allowFullScreen

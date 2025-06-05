@@ -8,7 +8,7 @@ const TermsOfUse = () => {
             </h2>
 
             <section className="pp">
-                <h3 className="pp_section-title">
+                <h3 className="pp_section-tle">
                     📘 Acceptation des conditions
                 </h3>
                 <p>
@@ -20,7 +20,7 @@ const TermsOfUse = () => {
             </section>
 
             <section className="pp">
-                <h3 className="pp_section-title">
+                <h3 className="pp_section-tle">
                     🖥️ Accessibilité & responsabilités
                 </h3>
                 <ul className="pp_list">
@@ -41,7 +41,7 @@ const TermsOfUse = () => {
             </section>
 
             <section className="pp">
-                <h3 className="pp_section-title">🔄 Modifications</h3>
+                <h3 className="pp_section-tle">🔄 Modifications</h3>
                 <p>
                     Les présentes conditions peuvent être modifiées à tout
                     moment. Nous vous encourageons à les consulter régulièrement
@@ -50,9 +50,7 @@ const TermsOfUse = () => {
             </section>
 
             <section className="pp">
-                <h3 className="pp_section-title">
-                    ⚖️ Propriété intellectuelle
-                </h3>
+                <h3 className="pp_section-tle">⚖️ Propriété intellectuelle</h3>
                 <p>
                     Tout le contenu du site (textes, images, logos, etc.) est
                     protégé par les lois sur la propriété intellectuelle. Toute

@@ -16,22 +16,22 @@ export default function BlogSectionCard({
     authors,
 }: SectionCardProps) {
     // Génère un ID unique pour le titre de la section
-    const headingId = `section-title-${section.slug}`;
+    const headingId = `section-tle-${section.slug}`;
 
     return (
-        <section className="section-card" aria-labelledby={headingId}>
-            <div className="section-card-header">
-                <h2 className="section-card-title" id={headingId}>
+        <section className="sct-C" aria-labelledby={headingId}>
+            <div className="sct-C-hd">
+                <h2 className="sct-C-tle" id={headingId}>
                     {section.title}
                 </h2>
-                <p className="section-card-desc">{section.description}</p>
-                <div className="section-card-link">
+                <p className="sct-C-desc">{section.description}</p>
+                <div className="sct-C-link">
                     <ButtonLink href={`/blog/sections/${section.slug}`}>
                         Tous les articles !
                     </ButtonLink>
                 </div>
             </div>
-            <div className="section-card-content">
+            <div className="sct-C-content">
                 <BlogList posts={posts} authors={authors} />
             </div>
         </section>

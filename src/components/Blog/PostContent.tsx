@@ -10,20 +10,20 @@ interface PostContentProps {
 }
 
 const PostContent: React.FC<PostContentProps> = ({ post, author }) => (
-    <article className="post-content">
-        <div className="post-content__title">
+    <article className="pst-ct">
+        <div className="pst-ct_tl">
             <h2>{post.title}</h2>
         </div>
-        <div className="post-content__post">
+        <div className="pst-ct__post">
             {post.videoUrl && (
-                <div className="post-content__video">
+                <div className="pst-ct_V">
                     <VideoEmbed
                         url={post.videoUrl}
                         title={`Vidéo de ${post.title}`}
                     />
                 </div>
             )}
-            <div className="post-content__content">
+            <div className="pst-ct__cnt">
                 <MarkdownRenderer>{post.content}</MarkdownRenderer>
             </div>
 

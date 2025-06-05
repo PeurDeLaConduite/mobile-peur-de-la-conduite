@@ -9,9 +9,9 @@ interface ButtonPageProps {
 }
 
 const ButtonPage: React.FC<ButtonPageProps> = ({ href, className = "" }) => (
-    <div className={`button-page ${className}`.trim()}>
+    <div className={`btn-P ${className}`.trim()}>
         <div className="center-fixed">
-            <BackButton href={href} label={""} className="button-page__back" />
+            <BackButton href={href} label={""} className="btn-P__back" />
         </div>
     </div>
 );

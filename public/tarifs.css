@@ -1,25 +1,28 @@
 .coach,
 .coach2,
 .container,
-.img-title,
+.img-tle,
 .srvP_bull-card {
     position: relative;
 }
+
 .category,
-.packs-container {
-    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+.pck-Ct {
+    filter: drop-shadow(var(--S_048) var(--bkR05));
 }
+
 .coach2 h3,
-.srvP_card-title .srvP-h3 h3,
+.srvP_C-tle .srvP-h3 h3,
 .title {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: var(--S_224) var(--bkR05);
 }
 
 .page {
-    background: #647d21;
+    background: var(--ol);
     padding-bottom: 64px;
 }
-.page-title {
+
+.page-tle {
     width: calc(100% - 32px);
     display: flex;
     flex-flow: row nowrap;
@@ -28,9 +31,10 @@
     padding: 0;
     gap: 12px;
     margin: 16px 0 0 16px;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(var(--S_224) var(--bkR05));
 }
-.page-title .nav-icon {
+
+.page-tle .nav-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,10 +42,11 @@
     height: auto !important;
     margin: 0;
 }
-.page-title .title {
+
+.page-tle .title {
     font-family: Montserrat, sans-serif;
     font-weight: 700;
-    color: #fff;
+    color: var(--w);
     letter-spacing: 0.6px;
     font-size: 1.8rem;
     text-shadow: none;
@@ -53,32 +58,38 @@
     max-height: 64px;
     line-height: 32px;
 }
+
 .margin-srv {
     height: 32px;
 }
-.page-title .icon-color {
+
+.page-tle .icon-color {
     width: 100%;
     height: 100%;
     max-width: 64px;
     max-height: 64px;
-    fill: #fff;
+    fill: var(--w);
 }
+
 .container {
     z-index: 1;
     padding: 0 16px;
     text-align: center;
     margin: 0 auto;
 }
+
 .category {
     padding: 16px;
     border-radius: 16px;
-    color: #1e1e1e;
-    background: #ffb121;
+    color: var(--bk2);
+    background: var(--y);
 }
+
 .coach,
 .price-card {
-    background: #fff;
+    background: var(--w);
 }
+
 @media screen and (max-width: 370px) {
     .container {
         padding: inherit;
@@ -90,7 +101,7 @@
         margin: 0 auto;
     }
     .price-card,
-    .price-title {
+    .price-tle {
         width: calc(100% - 20px);
         min-width: 340px !important;
         max-width: 340px !important;
@@ -101,49 +112,57 @@
         font-size: 18px !important;
     }
 }
+
 .price-card,
-.price-title {
+.price-tle {
     width: calc(100% - 10px);
     min-width: 360px;
     max-width: 400px;
     position: relative;
 }
-.category-title {
+
+.category-tle {
     font-size: 1.5rem;
     margin-bottom: 8px;
 }
+
 .category-intro {
     max-width: 400px;
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 12px;
 }
+
 .coach p,
 .coach2 h3,
-.price-title,
-.srvP_card-title,
-.srvP_card-title .srvP-h3 h3 {
+.price-tle,
+.srvP_C-tle,
+.srvP_C-tle .srvP-h3 h3 {
     font-size: 1.25rem;
 }
-.packs-container {
+
+.pck-Ct {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 10px;
 }
+
 .price-card {
     border-radius: 0 0 16px 16px;
     margin-bottom: 20px;
     padding: 0 10px 10px;
     z-index: 2;
 }
-.price-title {
+
+.price-tle {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     top: 0.25px;
 }
+
 .coach,
 .coach2 {
     width: 100%;
@@ -154,36 +173,42 @@
     flex-flow: column nowrap;
     height: 120px;
     z-index: -1;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
-    border-bottom: 1px solid #fff;
+    filter: drop-shadow(var(--S_223) var(--bl1R025));
+    border-bottom: 1px solid var(--w);
 }
+
 .coach p {
     padding: 4px 8px;
-    filter: drop-shadow(2px 2px 3px rgba(26, 109, 229, 0.25));
+    filter: drop-shadow(var(--S_223) var(--bl1R025));
     width: fit-content;
-    color: #ffb121;
+    color: var(--y);
     text-align: center;
 }
+
 .coach2 h3,
-.srvP_card-title .srvP-h3 h3,
-h3.price-title {
-    color: #fff;
+.srvP_C-tle .srvP-h3 h3,
+h3.price-tle {
+    color: var(--w);
     font-weight: 700;
 }
-.service-image {
+
+.srv-image {
     padding: 4px 6px 12px 0;
 }
-#services-page .packs-container,
+
+#services-page .pck-Ct,
 .coach2 {
     padding: 0;
 }
-.service-image img,
-.srvP_card-title .srvP-img img {
+
+.srv-image img,
+.srvP_C-tle .srvP-img img {
     margin: 0 auto;
     width: 68px;
     height: 68px;
-    filter: drop-shadow(2px 2px 3px rgba(26, 109, 229, 0.25));
+    filter: drop-shadow(var(--S_223) var(--bl1R025));
 }
+
 .coach2 {
     flex: 2;
     align-items: flex-end;
@@ -192,114 +217,135 @@ h3.price-title {
     box-shadow: none;
     filter: none;
 }
+
 .coach2 h3 {
     z-index: 1;
     padding: 16px 10px 0 16px;
     flex: 2;
     border-radius: 0 16px 2px 0;
-    background: #1a6de5;
+    background: var(--bl1);
     min-height: 92px;
 }
+
 .coach2 .empty {
     height: 36px;
     top: 0;
     min-width: 100%;
     display: block;
 }
-.img-title {
+
+.img-tle {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
     height: 118px;
 }
+
 .coach-icon {
-    border: 1px solid #fff;
+    border: 1px solid var(--w);
     width: 140px;
 }
-h3.price-title {
+
+h3.price-tle {
     margin: 8px 0;
     text-align: left;
     display: block;
     font-size: 1.35rem;
 }
-.price-table {
+
+.price-tbl {
     margin: 10px 0 0;
     width: 100%;
     border-collapse: collapse;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
+
 .srvP_bull-card,
-.srvP_card-title {
+.srvP_C-tle {
     width: calc(100% - 10px);
     max-width: 400px;
 }
-.price-table td,
-.price-table th {
+
+.price-tbl td,
+.price-tbl th {
     padding: 10px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--g2);
 }
-.price-table .nb-sessions,
-.price-table thead {
-    color: #fff;
-    background-color: #1a6de5;
+
+.price-tbl .nb-sessions,
+.price-tbl thead {
+    color: var(--w);
+    background-color: var(--bl1);
     padding: 1px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--S_224) var(--bkR05);
     font-weight: 700;
 }
+
 .individual-session p {
     font-size: 1rem;
     margin: 10px 0;
     font-weight: 500;
 }
-.price-table tr:last-child td:first-child {
+
+.price-tbl tr:last-child td:first-child {
     border-bottom-left-radius: 10px;
     border-bottom: 0 !important;
 }
-.price-table tr:last-child td {
+
+.price-tbl tr:last-child td {
     border-bottom: 1px solid transparent !important;
 }
+
 thead tr th {
-    border-right: 1px solid #fff;
-    border-left: 1px solid #fff;
+    border-right: 1px solid var(--w);
+    border-left: 1px solid var(--w);
 }
+
 thead tr th:first-child,
 thead tr th:last-child {
     border-right: none;
     border-left: none;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--g2);
 }
+
 a {
     text-decoration: none;
 }
-#services-page .page-title {
+
+#services-page .page-tle {
     min-width: inherit;
 }
+
 #services-page .title {
     min-width: inherit;
     max-height: 48px;
     line-height: 32px;
 }
-#services-page .page-title .icon-color,
-#services-page .page-title .nav-icon {
+
+#services-page .page-tle .icon-color,
+#services-page .page-tle .nav-icon {
     display: flex;
     width: 64px;
     height: 64px;
 }
-.srvP_card-title {
+
+.srvP_C-tle {
     min-width: 330px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.srvP_card-title .srvP-img {
+
+.srvP_C-tle .srvP-img {
     padding: 6px 10px;
-    background-color: #fff;
+    background-color: var(--w);
     border-radius: 50%;
 }
-.srvP_card-title .srvP-h3 {
+
+.srvP_C-tle .srvP-h3 {
     display: flex;
     align-items: center;
     z-index: 1;
@@ -307,17 +353,20 @@ a {
     flex: 2;
     min-height: 92px;
 }
+
 .srvP_bull-card {
     margin: 20px 0;
     min-width: 320px;
-    background: #fff;
+    background: var(--w);
     border-radius: 24px;
     padding: 10px 16px;
     z-index: 2;
 }
-.srvP_bull-card p.service-description {
-    color: #1e1e1e;
+
+.srvP_bull-card p.srv-desrib {
+    color: var(--bk2);
 }
+
 .srvP_bull-card .bull-bd {
     position: absolute;
     top: -24px;
@@ -325,13 +374,16 @@ a {
     width: 24px;
     height: 25px;
 }
-.packs-container:nth-child(2n) .srvP_card-title {
+
+.pck-Ct:nth-child(2n) .srvP_C-tle {
     flex-direction: row-reverse;
 }
-.packs-container:nth-child(2n) .srvP_bull-card .bull-bd {
+
+.pck-Ct:nth-child(2n) .srvP_bull-card .bull-bd {
     right: 96px;
     left: auto;
 }
-.packs-container:nth-child(2n) .srvP_bull-card .bull-bd img {
+
+.pck-Ct:nth-child(2n) .srvP_bull-card .bull-bd img {
     transform: scale(-1, 1);
 }

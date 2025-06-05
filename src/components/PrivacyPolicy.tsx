@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
             </h2>
 
             <section className="pp">
-                <h3 className="pp_section-title">
+                <h3 className="pp_section-tle">
                     🔒 Aucune transmission à des tiers
                 </h3>
                 <p>
@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section className="pp">
-                <h3 className="pp_section-title">🔐 Sécurité maximale</h3>
+                <h3 className="pp_section-tle">🔐 Sécurité maximale</h3>
                 <p>
                     Vos données sont stockées de manière sécurisée avec des
                     mesures techniques et organisationnelles destinées à{" "}
@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section className="pp">
-                <h3 className="pp_section-title">✅ Consentement clair</h3>
+                <h3 className="pp_section-tle">✅ Consentement clair</h3>
                 <ul className="pp_list">
                     <li>
                         En cochant la case{" "}
@@ -53,7 +53,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section className="pp">
-                <h3 className="pp_section-title">📬 Vos droits</h3>
+                <h3 className="pp_section-tle">📬 Vos droits</h3>
                 <p>
                     Vous pouvez à tout moment demander la{" "}
                     <strong>modification ou la suppression</strong> de vos

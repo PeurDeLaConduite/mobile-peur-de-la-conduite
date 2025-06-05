@@ -1,6 +1,6 @@
-import ServiceCategory from "../Component/ServiceCategory";
+import Servicecategory from "../Component/Servicecategory";
 import { servicesData } from "../Component/servicesData";
 
-const Beginner = () => <ServiceCategory {...servicesData.beginner} />;
+const Beginner = () => <Servicecategory {...servicesData.beginner} />;
 
 export default Beginner;

@@ -11,7 +11,7 @@ type Props = {
 function BlogList({ posts, authors }: Props) {
     const [hovered, setHovered] = useState<string | null>(null);
     return (
-        <div className="blog-list">
+        <div className="blg-lst">
             {posts.map((post) => {
                 const author = authors.find((a) => a.id === post.authorId)!;
                 return (
