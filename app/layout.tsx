@@ -86,12 +86,12 @@ export default function RootLayout({
            <head>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
-                <link rel="preload" href="./deferCss.css" as="style" />
+                {/* <link rel="preload" href="./deferCss.css" as="style" />
                 <link
                     rel="stylesheet"
                     href="./deferCss.css"
                     fetchPriority="low"
-                />
+                /> */}
                 {/* <link rel="preload" href="./tarifs.css" as="style" />
                 <link
                     rel="stylesheet"

@@ -1,14 +1,19 @@
+.md-c table,
+.price-tbl,
+table {
+    border-collapse: collapse;
+}
+.blg-C__excerpt,
+input.show-link {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 .bl-c_tle a,
 .coach2 h3,
 .pst-ct_tl h2,
-.srvP_card-tle .srvP-h3 h3,
+.srvP_C-tle .srvP-h3 h3,
 .title {
     text-shadow: var(--S_224) var(--bkR05);
-}
-.md-c table,
-.price-table,
-table {
-    border-collapse: collapse;
 }
 .avat,
 .blg-C_V,
@@ -19,11 +24,6 @@ table {
 .submenu_group .nav-link,
 .vid-M,
 .vid-M .loader {
-    overflow: hidden;
-}
-.blg-C__excerpt,
-input.show-link {
-    text-overflow: ellipsis;
     overflow: hidden;
 }
 .pst-a_dt,
@@ -162,12 +162,12 @@ option {
     height: 384px;
     width: 100%;
 }
-.about .segment,
-.services .segment {
+.about .sgm,
+.services .sgm {
     margin-top: 2.6rem;
 }
-.about .segment .card_header,
-.services .segment .card_header {
+.about .sgm .card_H,
+.services .sgm .card_H {
     position: relative;
     z-index: 2;
     padding: 0;
@@ -176,8 +176,8 @@ option {
     justify-content: space-between;
     height: 310px;
 }
-.about .segment .card_header h3,
-.services .segment .card_header h3 {
+.about .sgm .card_H h3,
+.services .sgm .card_H h3 {
     font-size: 1.5rem;
     color: var(--w);
     text-shadow: 0 4px 4px var(--bkR025);
@@ -187,13 +187,13 @@ option {
     width: 100%;
     text-align: center;
 }
-.about .segment .card_header h3 span,
-.services .segment .card_header h3 span {
+.about .sgm .card_H h3 span,
+.services .sgm .card_H h3 span {
     font-weight: 500;
     margin-left: 0.5rem;
 }
-.about .segment .card_header .profession,
-.services .segment .card_header .profession {
+.about .sgm .card_H .profession,
+.services .sgm .card_H .profession {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: -1.12px;
@@ -202,22 +202,22 @@ option {
     height: 34px;
     text-align: center;
 }
-.about .segment .card_header img.ab-img_head,
-.services .segment .card_header img.ab-img_head {
+.about .sgm .card_H img.ab-img_head,
+.services .sgm .card_H img.ab-img_head {
     margin: 6px;
     border-radius: 48px;
     width: 225px;
     height: 225px;
 }
-.about .segment .card_content,
-.services .segment .card_content {
+.about .sgm .card_cnt,
+.services .sgm .card_cnt {
     height: auto;
     width: 100%;
     gap: 24px;
     padding: 2rem 0 0;
 }
-.about .segment .card_content p,
-.services .segment .card_content p {
+.about .sgm .card_cnt p,
+.services .sgm .card_cnt p {
     max-width: inherit;
     width: 100%;
     padding: 0 1rem 0 0;
@@ -225,8 +225,8 @@ option {
     font-size: 1.25rem;
     color: var(--bk2);
 }
-.about .btn-style_blue,
-.services .btn-style_blue {
+.about .btn-SB,
+.services .btn-SB {
     margin: 3.5rem 1.5rem 0 0;
     align-self: center;
 }
@@ -312,8 +312,7 @@ option {
     transition: transform 0.3s ease-in-out;
     color: var(--bk);
 }
-.head-link.active .submenu-arrow,
-.pst-ct .md-c li strong {
+.head-link.active .submenu-arrow {
     color: var(--bl1);
 }
 .head-link .submenu-arrow.open {
@@ -330,6 +329,7 @@ option {
     visibility: hidden;
     margin: 0 !important;
     padding: 0 !important;
+    overflow: hidden;
     transform: scale(0);
     width: 0;
 }
@@ -341,6 +341,10 @@ option {
     transform-origin: left;
     opacity: 0;
     width: 100%;
+}
+.blg-C,
+.btn-SB {
+    transform: scale(1);
 }
 input.show-link {
     min-width: 112px;
@@ -357,7 +361,6 @@ input.show-link {
     transition: 0.3s ease-in-out;
     height: auto;
 }
-.blg-C_V .vid-M .loader .ld-circleBG,
 .ctc-layout .ctc-form .cgu label,
 .nav-link.display-none {
     display: none;
@@ -376,6 +379,7 @@ nav .group_link-submenu:focus-visible .submenu {
     border-radius: 0.5rem;
     color: var(--bk2);
     text-decoration: none;
+    overflow: hidden;
     transition: color 0.3s;
 }
 .submenu_group .nav-link:after,
@@ -414,19 +418,18 @@ nav .group_link-submenu:focus-visible .submenu {
     transition: fill, color, transform 0.35s;
     background: 0 0;
 }
-.btn-style_blue {
+.btn-SB {
     border-radius: 8px;
     padding: 0.75rem 2rem;
     height: 44px;
     background: var(--bl1);
     box-shadow: var(--S_044) var(--bkR025);
-    transform: scale(1);
     transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
     will-change: transform, box-shadow;
     min-width: 160px;
 }
-.btn-style_blue,
-.btn-style_blue a {
+.btn-SB,
+.btn-SB a {
     font-family: Nunito, serif;
     color: var(--w);
     font-style: normal;
@@ -434,7 +437,7 @@ nav .group_link-submenu:focus-visible .submenu {
     line-height: 1rem;
     text-align: center;
 }
-.btn-style_blue:after {
+.btn-SB:after {
     content: "";
     position: absolute;
     inset: 0;
@@ -483,7 +486,7 @@ nav .group_link-submenu:focus-visible .submenu {
     position: relative;
     z-index: 1;
 }
-.services .segment .accompanist-bg {
+.services .sgm .accompanist-bg {
     position: relative;
     top: -42px;
     background: var(--w);
@@ -492,11 +495,11 @@ nav .group_link-submenu:focus-visible .submenu {
     margin: 0;
     border-radius: 0 0 45px 45px;
 }
-.services .segment .accompanist-bg .card_content {
+.services .sgm .accompanist-bg .card_cnt {
     max-height: 121px;
 }
-.services .segment .accompanist-bg .isAccompanist,
-.services .segment .accompanist-bg .isAccompanist p {
+.services .sgm .accompanist-bg .isAccompanist,
+.services .sgm .accompanist-bg .isAccompanist p {
     padding-top: 0;
 }
 .ctc-layout .ctc-form .form-questions .questions .response span.checked {
@@ -549,7 +552,7 @@ form.srv-form span {
     left: -32px;
 }
 form.srv-form label {
-    font-family: var(--FtM);
+    font-family: Montserrat, sans-serif;
     line-height: 1.75rem;
     font-style: normal;
     color: var(--bk2);
@@ -559,45 +562,37 @@ form.srv-form label {
 .services.content-srv {
     margin-top: 60px;
 }
-.services.content-srv .segment {
+.services.content-srv .sgm {
     margin: 0;
     width: 100%;
 }
-.services.content-srv .segment-tle {
+.services.content-srv .sgm-tle {
     padding: 0.5rem;
     align-items: flex-start;
     text-align: left;
     width: 100%;
 }
-.coach p,
-.container,
-.ctc-layout .ctc-form .form-tle,
-.footer,
-h1.pp_title,
-h2.pp_title {
-    text-align: center;
-}
-.services.content-srv .segment-tle h2.card_title {
+.services.content-srv .sgm-tle h2.card_title {
     font-size: 1.375rem;
     padding: 1rem 0.5rem 0.5rem;
     margin: 0;
 }
-.services.content-srv .segment .card_header {
+.services.content-srv .sgm .card_H {
     margin: 0.5rem 1rem 2rem;
     width: 100%;
     width: calc(100% - 2rem);
     border-radius: 0.5rem;
 }
-.services.content-srv .segment .card_header p {
+.services.content-srv .sgm .card_H p {
     text-align: left;
     font-size: 1.135rem;
     color: var(--bk2);
 }
-.services.content-srv .segment .card_content {
+.services.content-srv .sgm .card_cnt {
     width: 100%;
     padding: 0;
 }
-.services.content-srv .segment .card_content .srv-description {
+.services.content-srv .sgm .card_cnt .srv-description {
     padding: 0;
     margin: 0 1.5rem;
     align-items: center;
@@ -608,18 +603,14 @@ h2.pp_title {
     background: var(--w);
     flex-flow: row-reverse;
 }
-.services.content-srv .segment .card_content .srv-description a {
+.services.content-srv .sgm .card_cnt .srv-description a {
     font-weight: 600;
     font-size: 1.25rem;
     color: var(--bk2);
     width: calc(100% - 1rem);
     margin-left: 1rem;
 }
-.services.content-srv
-    .segment
-    .card_content
-    .srv-description
-    .icon-description {
+.services.content-srv .sgm .card_cnt .srv-description .icon-description {
     position: relative;
     border-radius: 50%;
     background: var(--w);
@@ -645,19 +636,14 @@ h2.pp_title {
 .boolean-checkbox span {
     z-index: -1;
 }
-.services.content-srv
-    .segment
-    .card_content
-    .srv-description
-    .icon-description
-    img {
+.services.content-srv .sgm .card_cnt .srv-description .icon-description img {
     border-radius: 50%;
     background: var(--w);
     position: absolute;
     width: 100%;
     height: 100%;
 }
-.services.content-srv .segment .card_content .srv-description.o1 {
+.services.content-srv .sgm .card_cnt .srv-description.o1 {
     border-radius: 0;
     background: var(--ol);
     width: 100%;
@@ -668,7 +654,7 @@ h2.pp_title {
     gap: 1rem;
     height: auto;
 }
-.services.content-srv .segment .card_content .srv-description.o1 p {
+.services.content-srv .sgm .card_cnt .srv-description.o1 p {
     font-size: 1.375rem;
     font-weight: 600;
     text-shadow: var(--S_444) var(--bkR025);
@@ -678,34 +664,25 @@ h2.pp_title {
     padding: 0;
     text-align: left;
 }
-.services.content-srv
-    .segment
-    .card_content
-    .srv-description.o1
-    .icon-description {
+.services.content-srv .sgm .card_cnt .srv-description.o1 .icon-description {
     border: none;
     min-width: inherit;
     height: auto;
     filter: drop-shadow(var(--S_444) var(--bkR025));
 }
-.services.content-srv
-    .segment
-    .card_content
-    .srv-description.o1
-    .icon-description
-    img {
+.services.content-srv .sgm .card_cnt .srv-description.o1 .icon-description img {
     background: 0 0;
     border-radius: 0;
     width: 45px;
     height: 45px;
 }
-.services .segment {
+.services .sgm {
     flex-flow: column nowrap;
     background: var(--bl1);
     margin: 0;
     width: 100%;
 }
-.services .segment h2.card_title {
+.services .sgm h2.card_title {
     justify-content: flex-start;
     color: var(--w);
     text-shadow: var(--S_044) var(--bkR025);
@@ -714,7 +691,7 @@ h2.pp_title {
     width: 100%;
     align-self: flex-start;
 }
-.services .segment .card_header {
+.services .sgm .card_H {
     margin: 1rem 1rem 2.5rem 2rem;
     padding: 1rem;
     width: 75%;
@@ -723,27 +700,27 @@ h2.pp_title {
     box-shadow: var(--S_246) var(--bkR025);
     border-radius: 1.5rem;
 }
-.services .segment .card_header img.srv-img_typo {
+.services .sgm .card_H img.srv-img_typo {
     width: 360px;
     padding: 0.5rem;
 }
 .form label:first-of-type,
-.services .segment .card_header img.srv-img_lesson {
+.services .sgm .card_H img.srv-img_lesson {
     margin-top: 12px;
 }
-.services .segment .card_content {
+.services .sgm .card_cnt {
     height: auto;
     padding: 1rem 0.5rem 0 2rem;
     background: var(--w);
     border-radius: 0;
 }
-.services .segment .card_content p {
+.services .sgm .card_cnt p {
     padding-bottom: 14px;
 }
-.services .segment .card_content p strong:first-child {
+.services .sgm .card_cnt p strong:first-child {
     font-size: 1.375rem;
 }
-.services .segment .card_content p.srv-ask {
+.services .sgm .card_cnt p.srv-ask {
     font-weight: bolder;
 }
 .contact {
@@ -802,9 +779,9 @@ h2.pp_title {
 }
 .contact .ctc-announcement p,
 .contact .ctc-card p,
-.contact .ctc-social_card p {
+.contact .ctc-social_C p {
     width: 100%;
-    font-family: var(--FtM);
+    font-family: Montserrat, sans-serif;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 500;
@@ -823,7 +800,7 @@ h2.pp_title {
     grid-auto-flow: dense;
 }
 .contact .ctc-card,
-.contact .ctc-social_card {
+.contact .ctc-social_C {
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -839,16 +816,16 @@ h2.pp_title {
     text-align: center;
 }
 .contact .ctc-card img,
-.contact .ctc-social_card img {
+.contact .ctc-social_C img {
     width: 40px;
     height: 40px;
     margin-bottom: 15px;
 }
-.contact .ctc-social_card {
+.contact .ctc-social_C {
     display: flex;
     flex-flow: column wrap;
 }
-.contact .ctc-social_card p {
+.contact .ctc-social_C p {
     width: 100%;
     text-align: left;
     margin-bottom: 1rem;
@@ -903,6 +880,7 @@ h2.pp_title {
     width: 100%;
     height: auto;
     gap: 20px;
+    text-align: center;
     margin-bottom: 1.5rem;
 }
 .ctc-layout .ctc-form .form-questions {
@@ -1021,6 +999,7 @@ h2.pp_title {
     left: 0;
 }
 .footer {
+    text-align: center;
     font-size: 1rem;
     background: var(--bk1);
     height: fit-content;
@@ -1060,14 +1039,14 @@ h2.pp_title {
 .pp_title,
 section.pp h2 {
     font-weight: 700;
-    font-family: var(--FtM) !important;
+    font-family: Montserrat, sans-serif !important;
 }
 .pp_politique-container strong,
 .pp_title,
 section.pp h3,
 section.pp li,
 section.pp p {
-    font-family: var(--FtM) !important;
+    font-family: Montserrat, sans-serif !important;
 }
 .pp_politique-container {
     max-width: 900px;
@@ -1082,10 +1061,12 @@ section.pp p {
 }
 h1.pp_title {
     font-size: 1.875rem;
+    text-align: center;
     color: var(--bk);
 }
 h2.pp_title {
     font-size: 1.55rem;
+    text-align: center;
     color: var(--bk);
 }
 .pp_section-tle {
@@ -1253,7 +1234,7 @@ section.pp p {
 .coach p,
 .coach2,
 .srv-image img,
-.srvP_card-tle .srvP-img img {
+.srvP_C-tle .srvP-img img {
     filter: drop-shadow(var(--S_223) var(--bl1R025));
 }
 .page-tle .nav-icon {
@@ -1354,8 +1335,8 @@ section.pp p {
 .price-tle,
 .pst-ct .md-c h2,
 .sct-C-hd .sct-C-tle,
-.srvP_card-tle,
-.srvP_card-tle .srvP-h3 h3 {
+.srvP_C-tle,
+.srvP_C-tle .srvP-h3 h3 {
     font-size: 1.25rem;
 }
 .pck-Ct {
@@ -1395,7 +1376,7 @@ section.pp p {
     color: var(--y);
 }
 .coach2 h3,
-.srvP_card-tle .srvP-h3 h3,
+.srvP_C-tle .srvP-h3 h3,
 h3.price-tle {
     color: var(--w);
     font-weight: 700;
@@ -1408,7 +1389,7 @@ h3.price-tle {
     padding: 0;
 }
 .srv-image img,
-.srvP_card-tle .srvP-img img {
+.srvP_C-tle .srvP-img img {
     margin: 0 auto;
     width: 68px;
     height: 68px;
@@ -1452,25 +1433,25 @@ h3.price-tle {
     display: block;
     font-size: 1.35rem;
 }
-.price-table {
+.price-tbl {
     margin: 10px 0 0;
     width: 100%;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
 .srvP_bull-card,
-.srvP_card-tle {
+.srvP_C-tle {
     width: calc(100% - 10px);
     max-width: 400px;
 }
-.price-table td,
-.price-table th {
+.price-tbl td,
+.price-tbl th {
     padding: 10px;
     text-align: center;
     border-bottom: 1px solid var(--g2);
 }
-.price-table .nb-sessions,
-.price-table thead {
+.price-tbl .nb-sessions,
+.price-tbl thead {
     color: var(--w);
     background-color: var(--bl1);
     padding: 1px;
@@ -1482,11 +1463,11 @@ h3.price-tle {
     margin: 10px 0;
     font-weight: 500;
 }
-.price-table tr:last-child td:first-child {
+.price-tbl tr:last-child td:first-child {
     border-bottom-left-radius: 10px;
     border-bottom: 0 !important;
 }
-.price-table tr:last-child td {
+.price-tbl tr:last-child td {
     border-bottom: 1px solid transparent !important;
 }
 thead tr th {
@@ -1516,18 +1497,18 @@ a {
     width: 64px;
     height: 64px;
 }
-.srvP_card-tle {
+.srvP_C-tle {
     min-width: 330px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.srvP_card-tle .srvP-img {
+.srvP_C-tle .srvP-img {
     padding: 6px 10px;
     background-color: var(--w);
     border-radius: 50%;
 }
-.srvP_card-tle .srvP-h3 {
+.srvP_C-tle .srvP-h3 {
     display: flex;
     align-items: center;
     z-index: 1;
@@ -1558,7 +1539,7 @@ a {
     width: 24px;
     height: 25px;
 }
-.pck-Ct:nth-child(2n) .srvP_card-tle {
+.pck-Ct:nth-child(2n) .srvP_C-tle {
     flex-direction: row-reverse;
 }
 .pck-Ct:nth-child(2n) .srvP_bull-card .bull-bd {
@@ -1646,7 +1627,6 @@ a {
 .blg-C {
     flex: 1 1;
     box-shadow: var(--S_0832) var(--bl1R022), var(--S_1529) var(--bkR07);
-    transform: scale(1);
     opacity: 1;
     z-index: 2;
     flex-direction: column;
@@ -2132,6 +2112,11 @@ article.blg-C {
     border-radius: 0.7rem;
     border: 4px solid var(--w);
 }
+.avat,
+.pst-a__meta .avat img {
+    width: 48px;
+    height: 48px;
+}
 .md-c h2 {
     font-size: 1.25rem;
     font-weight: 700;
@@ -2167,8 +2152,6 @@ article.blg-C {
     justify-content: center;
 }
 .pst-a__meta .avat img {
-    width: 48px;
-    height: 48px;
     position: absolute;
     display: block;
 }
@@ -2188,10 +2171,6 @@ article.blg-C {
 .pst-a_dt {
     font-size: 0.75rem;
     color: var(--y);
-}
-.avat {
-    width: 48px;
-    height: 48px;
 }
 .avat img {
     width: 100%;
