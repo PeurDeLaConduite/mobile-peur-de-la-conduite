@@ -92,7 +92,7 @@ export default function RootLayout({
                     href="./deferCss.css"
                     fetchPriority="low"
                 />
-                {/* <link rel="preload" href="./tarifs.css" as="style" />
+                <link rel="preload" href="./tarifs.css" as="style" />
                 <link
                     rel="stylesheet"
                     href="./tarifs.css"
@@ -103,7 +103,7 @@ export default function RootLayout({
                     rel="stylesheet"
                     href="./blog.css"
                     fetchPriority="low"
-                /> */}
+                />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
