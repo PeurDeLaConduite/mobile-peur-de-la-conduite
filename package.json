@@ -45,9 +45,9 @@
         "webpack": "^5.0.0"
     },
     "browserslist": [
-        "last 2 Chrome versions",
-        "last 2 Firefox versions",
-        "last 2 Edge versions",
-        "last 2 Safari versions"
+        "chrome >= 90",
+        "firefox >= 90",
+        "edge >= 90",
+        "safari >= 14"
     ]
 }
