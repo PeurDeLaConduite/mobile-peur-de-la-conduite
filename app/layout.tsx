@@ -4,7 +4,7 @@ import Loader from "../src/components/loader/Loader";
 import ClientLayout from "./ClientLayout"; 
 import "./globals.css"
 // import "./blog.css"
-import "./tarifs.css" 
+// import "./tarifs.css" 
 import { lazy, Suspense } from "react";
 const Footer = lazy(() => import("../src/components/footer/footer"));
 export const metadata: Metadata = {
@@ -48,23 +48,23 @@ export const metadata: Metadata = {
     
     icons: {
         apple: [
-            { url: "/img/favicon/apple-touch-icon.png" },  // 120x120
-            { url: "/img/favicon/logo.svg", sizes: "152x152", type: "image/png" },  // iPad
-            { url: "/img/favicon/logo.svg", sizes: "180x180", type: "image/png" },  // Retina
+            { url: "img/favicon/logo.svg", sizes: "152x152", type: "image/png" },  // iPad
+            { url: "img/favicon/logo.svg", sizes: "180x180", type: "image/png" },  // Retina
+            { url: "img/favicon/apple-touch-icon.png" },  // 120x120
         ],
 
         icon : [
-            { url: "/img/favicon/logo.svg", type: "image/svg+xml" },
-            { url: "/img/favicon/icons/favicon-16x16.png", sizes: "16x16", type: "image/png" },  
-            { url: "/img/favicon/icons/favicon-32x32.png", sizes: "32x32", type: "image/png" },  
-            { url: "/img/favicon/icons/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },  
-            { url: "/img/favicon/icons/android-chrome-512x512.png", sizes: "512x512", type: "image/png" }, 
-            { url: "/img/favicon/logo.svg", sizes: "48x48", type: "image/svg+xml" },  
-            { url: "/img/favicon/logo.svg", sizes: "64x64", type: "image/svg+xml" }, 
-            { url: "/img/favicon/logo.svg", sizes: "270x270", type: "image/svg+xml"  },  
-            { url: "/img/favicon/logo.svg", sizes: "310x310", type: "image/svg+xml"  }, 
-            { url: "/img/favicon/logo.svg", sizes: "152x152", type: "image/svg+xml"  },  
-            { url: "/img/favicon/logo.svg", sizes: "180x180", type: "image/svg+xml" }, 
+            { url: "img/favicon/logo.svg", type: "image/svg+xml" },
+            { url: "img/favicon/icons/favicon-16x16.png", sizes: "16x16", type: "image/png" },  
+            { url: "img/favicon/icons/favicon-32x32.png", sizes: "32x32", type: "image/png" },  
+            { url: "img/favicon/icons/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },  
+            { url: "img/favicon/icons/android-chrome-512x512.png", sizes: "512x512", type: "image/png" }, 
+            { url: "img/favicon/logo.svg", sizes: "48x48", type: "image/svg+xml" },  
+            { url: "img/favicon/logo.svg", sizes: "64x64", type: "image/svg+xml" }, 
+            { url: "img/favicon/logo.svg", sizes: "270x270", type: "image/svg+xml"  },  
+            { url: "img/favicon/logo.svg", sizes: "310x310", type: "image/svg+xml"  }, 
+            { url: "img/favicon/logo.svg", sizes: "152x152", type: "image/svg+xml"  },  
+            { url: "img/favicon/logo.svg", sizes: "180x180", type: "image/svg+xml" }, 
         ],        
     },
     alternates: {
@@ -86,12 +86,12 @@ export default function RootLayout({
            <head>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
-                {/* <link rel="preload" href="./deferCss.css" as="style" />
+                <link rel="preload" href="./defer.css" as="style" />
                 <link
                     rel="stylesheet"
                     href="./deferCss.css"
                     fetchPriority="low"
-                /> */}
+                />
                 {/* <link rel="preload" href="./tarifs.css" as="style" />
                 <link
                     rel="stylesheet"
