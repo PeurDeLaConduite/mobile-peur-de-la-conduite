@@ -1,7 +1,9 @@
 {
     "compilerOptions": {
-        "target": "ES2017",
-        "lib": ["dom", "dom.iterable", "esnext"],
+        // Passez ici à ES2020 (ou ESNext) pour ne plus générer de code ES2017
+        "target": "ES2020",
+        // Incluez les définitions ES2020 (ou ESNext si vous préférez)
+        "lib": ["dom", "dom.iterable", "es2020"],
         "allowJs": true,
         "skipLibCheck": true,
         "strict": false,
