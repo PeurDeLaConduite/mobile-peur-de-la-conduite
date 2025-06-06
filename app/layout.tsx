@@ -89,7 +89,7 @@ export default function RootLayout({
                 <link rel="preload" href="./defer.css" as="style" />
                 <link
                     rel="stylesheet"
-                    href="./deferCss.css"
+                    href="./defer.css"
                     fetchPriority="low"
                 />
                 {/* <link rel="preload" href="./tarifs.css" as="style" />

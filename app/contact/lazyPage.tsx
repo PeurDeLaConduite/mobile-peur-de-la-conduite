@@ -6,7 +6,7 @@ const DrivingProvider = dynamic(
     () => import("../../src/utils/context/DrivingContext"),
     {
         ssr: false,
-        loading: () => <div>Chargement des services...</div>,
+        loading: () => <Loader />,
     }
 );
 const ContactHome = lazy(() => import("../../src/home/contact-section"));
@@ -15,7 +15,7 @@ const LazyPage = () => {
         <DrivingProvider>
             <Suspense fallback={<Loader />}>
                 <ContactHome />
-            </Suspense>{" "}
+            </Suspense>
         </DrivingProvider>
     );
 };

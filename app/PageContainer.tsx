@@ -21,7 +21,6 @@ const SectionContainer = React.memo(function SectionContainer({
                     {icon}
                     <h1 className="title">{title}</h1>
                 </div>
-                <div className="fixed-menu" />
 
                 {children}
             </div>

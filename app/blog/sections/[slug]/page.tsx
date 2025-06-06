@@ -2,7 +2,7 @@
 import { loadData } from "@/src/utils/blogData/loadData"; // ✅ maintenant externe
 import { Metadata, ResolvingMetadata } from "next";
 import ButtonPage from "@components/Blog/ButtonPage";
-import SectionContainer from "@/app/blog/SectionContainer";
+import SectionContainer from "@/app/PageContainer";
 import BlogIcon from "@components/svg_Icon/Blog";
 export async function generateStaticParams() {
     const { sections } = await loadData();

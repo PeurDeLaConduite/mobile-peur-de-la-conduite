@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import PageContainer from "../PageContainer";
 import LazyPage from "./lazyPage";
 export const metadata: Metadata = {
     title: "Contact",
