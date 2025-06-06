@@ -15,6 +15,7 @@ input.show-link {
 .title {
     text-shadow: var(--S_224) var(--bkR05);
 }
+.announcement-wrapper,
 .avat,
 .blg-C_V,
 .flt-I,
@@ -725,6 +726,7 @@ form.srv-form label {
 }
 .contact {
     margin-bottom: 64px;
+    filter: drop-shadow(var(--S_0420) var(--bkR035));
 }
 .contact .contact-bg {
     position: relative;
@@ -739,16 +741,16 @@ form.srv-form label {
     z-index: 1;
     width: 100%;
     height: 100%;
-    padding: 1.5rem 4px;
+    padding: 1rem;
     margin: 0 auto;
 }
 .contact .ctc-content img.contact-bg {
     position: absolute;
+    border-radius: 1rem;
     z-index: 0;
     object-fit: cover;
     width: 100%;
     height: 100%;
-    border-radius: 0;
     box-shadow: var(--S_0420) var(--bkR01);
 }
 .contact .ctc-content .ctc-layout {
@@ -768,9 +770,12 @@ form.srv-form label {
     margin: 0;
     width: -moz-fit-content;
     width: fit-content;
-    padding: 8px 16px;
+    padding: 8px;
     border-radius: 16px;
     background: var(--yR035);
+}
+#contact .container {
+    padding: 0.5rem;
 }
 .contact .ctc-announcement img {
     width: 40px;
@@ -1439,8 +1444,8 @@ h3.price-tle {
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
-.srvP_bull-card,
-.srvP_C-tle {
+.srvP_C-tle,
+.srvP_bull-card {
     width: calc(100% - 10px);
     max-width: 400px;
 }
@@ -2187,4 +2192,8 @@ article.blg-C {
     box-shadow: inset var(--S_0832) var(--bl1R025),
         inset var(--S_1529) var(--bkR04);
     background: var(--bl2);
+}
+.announcement-icon {
+    float: left;
+    margin-top: 4px;
 }

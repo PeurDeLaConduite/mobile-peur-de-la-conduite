@@ -6,7 +6,6 @@ import { contactAnnouncements } from "../../../assets/data/content/contact";
 const ContactCard = () => {
     return (
         <React.Fragment>
-            <h2 className="card_title">Me Contacter ?</h2>
             <ContactAnnouncement message={contactAnnouncements[0].message} />
             <ContactInfo />
             <ContactAnnouncement message={contactAnnouncements[1].message} />
