@@ -43,5 +43,11 @@
         "tsx": "^4.19.0",
         "typescript": "^5.6.2",
         "webpack": "^5.0.0"
-    }
+    },
+    "browserslist": [
+        "last 2 Chrome versions",
+        "last 2 Firefox versions",
+        "last 2 Edge versions",
+        "last 2 Safari versions"
+    ]
 }
