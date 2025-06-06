@@ -1,15 +1,15 @@
 import React, { memo } from "react";
-import { ServicecategoryProps } from "./interface";
+import { ServiceCategoryProps } from "./interface";
 import ServiceItem from "./ServiceItem";
 import ServiceBanner from "./ServiceBanner";
 
-const Servicecategory = ({
+const ServiceCategory = ({
     id,
     title,
     subtitle,
     intro,
     services,
-}: ServicecategoryProps) => {
+}: ServiceCategoryProps) => {
     return (
         <div className="services content-wrapper content-srv" id={id}>
             <div className="sgm sgm-tle">
@@ -38,4 +38,4 @@ const Servicecategory = ({
     );
 };
 
-export default memo(Servicecategory);
+export default memo(ServiceCategory);

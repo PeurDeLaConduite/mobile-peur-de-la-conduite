@@ -5,7 +5,7 @@ export interface ServiceItemProps {
     id: string;
 }
 
-export interface ServicecategoryProps {
+export interface ServiceCategoryProps {
     id: string;
     title: string;
     subtitle: string;
