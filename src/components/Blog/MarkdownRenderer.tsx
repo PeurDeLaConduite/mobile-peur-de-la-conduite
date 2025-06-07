@@ -1,9 +1,11 @@
 // src/components/Blog/MarkdownRenderer.tsx
 "use client";
-import React from "react";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import React, { Suspense } from "react";
+import dynamic from "next/dynamic";
 
+const Markdown = dynamic(() => import("./MarkdownRendererLib"), {
+    ssr: false,
+});
 interface MarkdownRendererProps {
     children: string; // contenu Markdown passé en tant que children
 }
@@ -11,9 +13,9 @@ interface MarkdownRendererProps {
 export default function MarkdownRenderer({ children }: MarkdownRendererProps) {
     return (
         <div className="md-c">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {children}
-            </ReactMarkdown>
+            <Suspense fallback={null}>
+                <Markdown>{children}</Markdown>
+            </Suspense>
         </div>
     );
 }
