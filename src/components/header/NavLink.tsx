@@ -3,7 +3,6 @@ import { MenuItem } from "../../assets/data/menuItems";
 import { useNavigation } from "../../utils/context/NavigationContext";
 import SubMenu from "./SubMenu";
 import { svgComponents } from "./svgComponents";
-
 interface NavLinkProps {
     menuItem: MenuItem;
     onNavigationClick: (path: string) => void;

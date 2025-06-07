@@ -48,6 +48,6 @@
         "src/components/header/HeaderGhost.jsx",
         "src/home/service/Component/servicesData.js",
         "src/utils/setT.js"
-    ],
+, "app/ScrollSectionsWrapper.jsx", "src/home/about/AboutCard.jsx", "src/home/about/LoadMoreButton.jsx", "src/home/contact-section/contactForm/form.jsx", "src/home/contact-section/contactForm/formSuite.jsx", "src/home/slider/sliderItem/SldTitle.jsx"    ],
     "exclude": ["node_modules"]
 }

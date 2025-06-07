@@ -12,7 +12,7 @@ const AccQuestions: React.FC = () => {
         supervisedDriving,
     } = useDriving();
 
-    const onAccompanistChange = (value: boolean) => {
+    const onAccompanistChange = (value: boolean | null) => {
         setIsAccompanist(value);
     };
 

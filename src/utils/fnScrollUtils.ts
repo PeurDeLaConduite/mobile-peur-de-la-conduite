@@ -1,4 +1,4 @@
-export const handleScrollClick = (targetId: string) => {
+export const handleScrollClick = (targetId: string): void => {
     const element = document.getElementById(targetId);
     if (!element) return;
     const start = window.scrollY;
@@ -10,11 +10,15 @@ export const handleScrollClick = (targetId: string) => {
         new URL("/public/workers/scrollSmoothWorker.js", import.meta.url)
     );
 
-    const animateScroll = (currentTime) => {
+    // ✏️ On précise que currentTime est un number et que la fonction ne renvoie rien
+    const animateScroll = (currentTime: number): void => {
         worker.postMessage({ start, end, duration, startTime, currentTime });
     };
 
-    worker.onmessage = (event) => {
+    // Optionnel : typer aussi l’event qu’on reçoit du worker
+    worker.onmessage = (
+        event: MessageEvent<{ newScrollY: number; progress: number }>
+    ): void => {
         const { newScrollY, progress } = event.data;
         window.scrollTo(0, newScrollY);
         if (progress < 1) {

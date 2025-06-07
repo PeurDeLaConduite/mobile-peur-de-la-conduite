@@ -34,7 +34,7 @@ const Header: React.FC<NavProps> = () => {
     return (
         <div className="header">
             <LogoLink
-                onClick={(e) => {
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
                     e.preventDefault();
                     closeHamburgerMenu(200);
                     handleNavigationClick("/#slider");

@@ -7,6 +7,11 @@ import {
     updateSectionClasses,
 } from "../src/utils/fnScrollUtils";
 
+interface SectionPosition {
+    top: number;
+    height: number;
+}
+
 export const useScrollAnchors = (sections: { id: string }[]) => {
     const { setActiveSection } = useScrollContext();
 
@@ -17,17 +22,20 @@ export const useScrollAnchors = (sections: { id: string }[]) => {
             new URL("../public/workers/scrollWorker.js", import.meta.url)
         );
 
-        // Pré-calculer la position des sections (car le Worker ne peut pas accéder au DOM)
-        const positions = sections.reduce((acc, { id }) => {
-            const section = document.getElementById(id);
-            if (section) {
-                acc[id] = {
-                    top: section.offsetTop,
-                    height: section.offsetHeight,
-                };
-            }
-            return acc;
-        }, {});
+        // On spécifie ici que positions est un Record<string, SectionPosition>
+        const positions = sections.reduce<Record<string, SectionPosition>>(
+            (acc, { id }) => {
+                const section = document.getElementById(id);
+                if (section) {
+                    acc[id] = {
+                        top: section.offsetTop,
+                        height: section.offsetHeight,
+                    };
+                }
+                return acc;
+            },
+            {} // le type {} devient Record<string, SectionPosition> grâce au générique
+        );
 
         const handleScroll = () => {
             worker.postMessage({

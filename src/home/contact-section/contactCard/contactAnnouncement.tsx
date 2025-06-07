@@ -1,7 +1,13 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 
-const ContactAnnouncement = ({ message }) => {
+interface ContactAnnouncementProps {
+    message: string;
+}
+
+const ContactAnnouncement: React.FC<ContactAnnouncementProps> = ({
+    message,
+}) => {
     return (
         <div className="flx-c ctc-announcement">
             <div className="announcement-wrapper">
@@ -22,4 +28,4 @@ const ContactAnnouncement = ({ message }) => {
     );
 };
 
-export default ContactAnnouncement;
+export default React.memo(ContactAnnouncement);
