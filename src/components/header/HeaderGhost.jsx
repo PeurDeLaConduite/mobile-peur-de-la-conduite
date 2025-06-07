@@ -1,11 +1,11 @@
 import LogoLink from "./LogoLink";
-import { Menu } from "lucide-react";
+import MenuIcon from "@components/svg_Icon/utils/MenuIcon";
 const HeaderGhost = () => {
     return (
         <div className="header">
             <LogoLink />
             <button aria-label="ouvrir le menu" className="menu">
-                <Menu size={24} />
+                <MenuIcon />
             </button>
             <div className="head-flex absolute "></div>
         </div>

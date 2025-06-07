@@ -8,7 +8,7 @@ const links = [
     { url: "/contact", changefreq: "monthly", priority: 0.8 },
     { url: "/services", changefreq: "monthly", priority: 0.8 },
     { url: "/tarifs", changefreq: "monthly", priority: 0.8 },
-    // Tu peux en rajouter ici plus tard
+    { url: "/blog", changefreq: "monthly", priority: 0.8 },
 ];
 
 const sitemap = new SitemapStream({ hostname: siteUrl });

@@ -1,7 +1,7 @@
 import React from "react";
-import { Menu, X } from "lucide-react";
 import { useNavigation } from "../../utils/context/NavigationContext";
-
+import MenuIcon from "@components/svg_Icon/utils/MenuIcon";
+import XIcon from "@components/svg_Icon/utils/XIcon";
 const ButtonOpen = () => {
     const {
         hamburgerMenuIsOpen,
@@ -18,7 +18,7 @@ const ButtonOpen = () => {
             }
             className="menu"
         >
-            {hamburgerMenuIsOpen ? <X size={24} /> : <Menu size={24} />}
+            {hamburgerMenuIsOpen ? <XIcon /> : <MenuIcon />}
         </button>
     );
 };
