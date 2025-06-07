@@ -1967,6 +1967,7 @@ a {
     left: 0;
     z-index: 10;
     top: 102px;
+    /* right: -68px; */
     margin: 0 auto;
     width: 100%;
 }
@@ -1976,14 +1977,19 @@ a {
     position: relative;
 }
 .btn-P .btn-P__back {
-    font-style: normal;
+    /* font-style: normal;
     font-weight: 700;
-    text-align: center;
+    text-align: center; */
     border: 2px solid var(--w);
     background: var(--bl1);
-    right: -34px;
+    right: -50px;
+    position: relative;
     border-radius: 25px 0 0 25px;
     float: right;
+}
+.btn-P__back svg {
+    left:-4px;
+    position: relative;
 }
 .btn-P .btn-P__back:active,
 .btn-P__back:active,
