@@ -4,7 +4,7 @@ import Loader from "../src/components/loader/Loader";
 import ClientLayout from "./ClientLayout"; 
 import "./globals.css"
 // import "./blog.css"
-import "./tarifs.css" 
+// import "./tarifs.css" 
 import { lazy, Suspense } from "react";
 const Footer = lazy(() => import("../src/components/footer/footer"));
 export const metadata: Metadata = {
@@ -86,24 +86,12 @@ export default function RootLayout({
            <head>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
-                {/* <link rel="preload" href="./defer.css" as="style" />
+                <link rel="preload" href="./defer.css" as="style" />
                 <link
                     rel="stylesheet"
                     href="./defer.css"
                     fetchPriority="low"
-                /> */}
-                {/* <link rel="preload" href="./tarifs.css" as="style" />
-                <link
-                    rel="stylesheet"
-                    href="./tarifs.css"
-                    fetchPriority="low"
                 />
-                <link rel="preload" href="./blog.css" as="style" />
-                <link
-                    rel="stylesheet"
-                    href="./blog.css"
-                    fetchPriority="low"
-                /> */}
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
