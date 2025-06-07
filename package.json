@@ -45,9 +45,10 @@
         "webpack": "^5.0.0"
     },
     "browserslist": [
-        "chrome >= 90",
-        "firefox >= 90",
-        "edge >= 90",
-        "safari >= 14"
-    ]
+        "chrome >= 115",
+        "firefox >= 115",
+        "edge >= 115",
+        "safari >= 16"
+    ],
+    "packageManager": "yarn@4.9.2"
 }
