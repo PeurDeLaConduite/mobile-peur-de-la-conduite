@@ -14,7 +14,7 @@ const About = () => {
             </div>
             {aboutContent.map((content, index) => (
                 <AboutCard
-                    key={index + "about"}
+                    key={index + "aboutContent"}
                     cardIdentity={content.cardIdentity}
                     cardContent={content.cardContent}
                 />
