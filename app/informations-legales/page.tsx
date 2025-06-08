@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "informations-legales",
+    title: "Informations-légales",
 };
-import PrivacyPolicy from "../../src/components/PrivacyPolicy";
-import TermsOfUse from "../../src/components/TermsOfUse";
+import PrivacyPolicy from "../../src/components/Legal/PrivacyPolicy";
+import TermsOfUse from "../../src/components/Legal/TermsOfUse";
 export default async function Page() {
     return (
         <section className="section" id="s1">

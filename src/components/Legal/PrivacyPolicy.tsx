@@ -1,12 +1,12 @@
 import React from "react";
-import ButtonLink from "./button/ButtonLink";
+import ButtonLink from "../button/ButtonLink";
+import Cookies from "./Cookies";
 const PrivacyPolicy = () => {
     return (
         <div className="pp_politique-container">
             <h2 className="pp_title" id="privacy-policy">
                 Politique de Confidentialité
             </h2>
-
             <section className="pp">
                 <h3 className="pp_section-tle">
                     🔒 Aucune transmission à des tiers
@@ -21,7 +21,6 @@ const PrivacyPolicy = () => {
                     vous en avez fait la demande.
                 </p>
             </section>
-
             <section className="pp">
                 <h3 className="pp_section-tle">🔐 Sécurité maximale</h3>
                 <p>
@@ -30,7 +29,6 @@ const PrivacyPolicy = () => {
                     <strong>empêcher tout accès non autorisé</strong>.
                 </p>
             </section>
-
             <section className="pp">
                 <h3 className="pp_section-tle">✅ Consentement clair</h3>
                 <ul className="pp_list">
@@ -51,7 +49,6 @@ const PrivacyPolicy = () => {
                     </li>
                 </ul>
             </section>
-
             <section className="pp">
                 <h3 className="pp_section-tle">📬 Vos droits</h3>
                 <p>
@@ -61,6 +58,7 @@ const PrivacyPolicy = () => {
                     effet.
                 </p>
             </section>
+            <Cookies />
             <ButtonLink href={"/contact"}>Contact</ButtonLink>
         </div>
     );

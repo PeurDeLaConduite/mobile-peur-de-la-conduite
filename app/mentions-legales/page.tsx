@@ -1,20 +1,16 @@
 import { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "mentions-legales",
+    title: "Mentions-légales",
 };
+import LegalNotices from "../../src/components/Legal/LegalNotices";
 
 export default async function Page() {
     return (
         <section className="section" id="s1">
             <div className="fixed-menu"></div>
-            <h2>mentions-legales</h2>
             <div className="s1">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Velit aliquid provident magnam, delectus nobis est sunt iste
-                    aut at error assumenda voluptas, harum sed consequuntur
-                    voluptate soluta deleniti voluptatum consequatur.
-                </p>
+                <h1 className="pp_title">Mentions légales</h1>
+                <LegalNotices />
             </div>
         </section>
     );
