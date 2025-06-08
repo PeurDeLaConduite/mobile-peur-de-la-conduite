@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import HeaderLazy from "../src/components/header/HeaderLazy"
 import Loader from "../src/components/loader/Loader";
 import ClientLayout from "./ClientLayout"; 
@@ -7,6 +8,12 @@ import "./globals.css"
 // import "./tarifs.css" 
 import { lazy, Suspense } from "react";
 const Footer = lazy(() => import("../src/components/footer/footer"));
+const Montserrat = localFont({
+    src: "./fonts/Montserrat.woff2",
+    variable: "--montserrat",
+    weight: "100 900",
+    display: "swap", 
+});
 export const metadata: Metadata = {
     metadataBase: new URL("https://peur-de-la-conduite.fr/"),
     title: {
@@ -152,7 +159,9 @@ export default function RootLayout({
                     }}
                 />
             </head>
-            <body id="top">
+            <body
+                className={`${Montserrat.variable}`} id="top"
+            >
                     <ClientLayout>
                         <header>
                             <div className="content-wrapper">
