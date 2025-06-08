@@ -46,7 +46,7 @@
         "src/components/slider/SunBG.tsx",
         "src/utils/context/utils/createUseContext.tsx",
         "src/components/header/HeaderGhost.jsx",
-        "src/home/service/Component/servicesData.js",
+        "src/home/service/Component/servicesData.ts",
         "src/utils/setT.js",
         "app/ScrollSectionsWrapper.jsx",
         "src/home/about/AboutCard.jsx",

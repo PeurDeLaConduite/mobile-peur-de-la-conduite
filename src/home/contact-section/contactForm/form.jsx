@@ -49,9 +49,10 @@ const Form = ({ formData, errors, handleChange, state }) => {
                 type="email"
                 id="email"
                 name="email"
+                autoComplete="email"
                 value={formData.email}
                 onChange={handleChange}
-                // required
+                required
             />
 
             <ValidationError

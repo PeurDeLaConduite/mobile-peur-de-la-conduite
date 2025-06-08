@@ -1372,7 +1372,7 @@ section.pp p {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    top: 0.25px;
+    top: 1.25px;
 }
 .coach,
 .coach2 {
@@ -1499,6 +1499,22 @@ thead tr th:last-child {
 a {
     text-decoration: none;
 }
+#services-page .container > .fixed-menu,
+#prices .container > .fixed-menu {
+    display: none;
+}
+#services-page .sct-C-hd,
+#prices .sct-C-hd {
+    box-shadow: var(--S_224) var(--bkR05), inset var(--S_223) var(--bl1R025);
+    transform: rotate(-15deg);
+    position: relative;
+    top: -24px;
+}
+#services-page #sans-permis .sct-C-hd:first-child,
+#prices #sans-permis .sct-C-hd:first-child {
+    transform: rotate(15deg);
+    top: -5px;
+}
 #services-page .title {
     min-width: inherit;
     max-height: 48px;
@@ -1572,7 +1588,7 @@ a {
 #blog .page-tle {
     justify-content: flex-start !important;
     gap: 12px;
-    margin-bottom: 92px;
+    /* margin-bottom: 92px; */
 }
 .bl-c_tle,
 .blg-C__excerpt,
@@ -1988,7 +2004,7 @@ a {
     float: right;
 }
 .btn-P__back svg {
-    left:-4px;
+    left: -4px;
     position: relative;
 }
 .btn-P .btn-P__back:active,

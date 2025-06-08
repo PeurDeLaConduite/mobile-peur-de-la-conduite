@@ -1,4 +1,6 @@
-export const servicesData = {
+import type { ServicesData } from "./servicesTypes";
+
+export const servicesData: ServicesData = {
     beginner: {
         id: "beginner",
         ref: "sans-permis",

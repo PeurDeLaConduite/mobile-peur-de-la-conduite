@@ -7,7 +7,7 @@ import {
 export const contactAnnouncements: ContactAnnouncement[] = [
     {
         message:
-            "<strong>Des questions ?<br/> Un coup de pouce ?<br/> N’hésite pas, je suis là pour t’aider !</strong>",
+            "<strong>Des questions, ou besoin d’un coup de pouce ?<br/>Surtout n’hésite pas, je suis là pour t’aider !</strong>",
     },
     { message: "Vous pouvez également me contacter via ce formulaire." },
 ];

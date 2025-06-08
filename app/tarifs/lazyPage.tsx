@@ -1,8 +1,9 @@
 "use client";
 import React, { lazy, Suspense } from "react";
 import PageContainer from "../PageContainer";
-import ContactIcon from "../../src/components/svg_Icon/Contact";
+import TarifsIcon from "../../src/components/svg_Icon/Tarifs";
 import dynamic from "next/dynamic";
+import { servicesData } from "../../src/home/service/Component/servicesData";
 import Loader from "../../src/components/loader/Loader";
 const DrivingProvider = dynamic(
     () => import("../../src/utils/context/DrivingContext"),
@@ -11,17 +12,19 @@ const DrivingProvider = dynamic(
         loading: () => <Loader />,
     }
 );
-const ContactHome = lazy(() => import("../../src/home/contact-section"));
+const PriceSection = lazy(() => import("@src/components/Tarifs/PriceSection"));
 const LazyPage = () => {
     return (
         <DrivingProvider>
             <Suspense fallback={<Loader />}>
                 <PageContainer
-                    id="contact"
-                    title="Contact"
-                    icon={<ContactIcon />}
+                    id="prices"
+                    title="Nos Tarifs"
+                    icon={<TarifsIcon />}
                 >
-                    <ContactHome />
+                    {Object.values(servicesData).map((cat) => (
+                        <PriceSection key={cat.id + "PriceId"} category={cat} />
+                    ))}
                 </PageContainer>
             </Suspense>
         </DrivingProvider>
