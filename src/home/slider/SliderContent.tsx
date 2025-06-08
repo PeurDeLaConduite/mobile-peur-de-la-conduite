@@ -11,7 +11,7 @@ const SliderContent = () => {
 
     useT(() => {
         setShowSlider(true);
-    }, 2600);
+    }, 2400);
 
     if (!showSlider) {
         return <SliderIntro />;

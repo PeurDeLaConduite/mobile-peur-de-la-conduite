@@ -1,4 +1,3 @@
-"use client";
 import React, { lazy } from "react";
 import dynamic from "next/dynamic";
 import { SliderProvider } from "../../utils/context/slider/SliderContext";

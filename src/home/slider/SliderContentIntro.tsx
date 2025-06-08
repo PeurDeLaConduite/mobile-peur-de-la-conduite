@@ -1,4 +1,3 @@
-import React from "react";
 import SlideItem from "./sliderItem/SlideItem";
 import Arrow from "../../components/svg_Icon/utils/Arrow";
 const SliderIntro = () => {
@@ -14,46 +13,6 @@ const SliderIntro = () => {
                 descriptionBold2="succès ! ✈️"
                 className="start"
             />
-            <SlideItem
-                h2=""
-                h2bold=""
-                h2bold2=""
-                descriptionBold=""
-                description=""
-                description2=""
-                descriptionBold2=""
-                className="slide"
-            />
-            <SlideItem
-                h2=""
-                h2bold=""
-                h2bold2=""
-                descriptionBold=""
-                description=""
-                description2=""
-                descriptionBold2=""
-                className="slide"
-            />
-            <SlideItem
-                h2=""
-                h2bold=""
-                h2bold2=""
-                descriptionBold=""
-                description=""
-                description2=""
-                descriptionBold2=""
-                className="slide"
-            />
-            <SlideItem
-                h2=""
-                h2bold=""
-                h2bold2=""
-                descriptionBold=""
-                description=""
-                description2=""
-                descriptionBold2=""
-                className="slide"
-            />
             <span className="banner-arrow flx-c">
                 <Arrow className="" ariaLabel="buttonL" onClick={null} />
                 <Arrow className="" ariaLabel="buttonR" onClick={null} />
@@ -62,4 +21,4 @@ const SliderIntro = () => {
     );
 };
 
-export default React.memo(SliderIntro);
+export default SliderIntro;
