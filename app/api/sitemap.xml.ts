@@ -14,10 +14,10 @@ export default async function handler(
         { url: "/contact", changefreq: "monthly", priority: 0.8 },
         { url: "/services", changefreq: "monthly", priority: 0.8 },
         { url: "/tarifs", changefreq: "monthly", priority: 0.8 },
-        // { url: "/blog", changefreq: "weekly", priority: 0.8 },
+        { url: "/blog", changefreq: "weekly", priority: 0.8 },
+        { url: "/informations-legales", changefreq: "monthly", priority: 0.8 },
+        { url: "/mentions-legales", changefreq: "monthly", priority: 0.8 }, 
         // { url: "/reservation", changefreq: "monthly", priority: 0.8 },
-        // { url: "/informations-legales", changefreq: "monthly", priority: 0.8 },
-        // { url: "/mentions-legales", changefreq: "monthly", priority: 0.8 },
     ];
 
     const sitemap = new SitemapStream({ hostname: siteUrl });

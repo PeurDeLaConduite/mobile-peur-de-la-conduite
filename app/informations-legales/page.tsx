@@ -1,6 +1,15 @@
 import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Informations-légales",
+    alternates: {
+        canonical: "https://peur-de-la-conduite.fr/informations-legales",
+        media: {
+            "only screen and (max-width: 900px)":
+                "https://mobile.peur-de-la-conduite.fr/informations-legales",
+            "only screen and (min-width: 900px)":
+                "https://desktop.peur-de-la-conduite.fr/informations-legales",
+        },
+    },
 };
 import PrivacyPolicy from "../../src/components/Legal/PrivacyPolicy";
 import TermsOfUse from "../../src/components/Legal/TermsOfUse";
