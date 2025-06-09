@@ -8,7 +8,7 @@ import ServiceArticle from "./ServiceArticle";
 type Props = { category: CategoryData };
 
 const CategorySection: React.FC<Props> = ({ category }) => (
-  <div id={category.ref} key={category.id}>
+  <section id={category.ref} key={category.id}>
     <div className="fixed-menu" />
     <section className="category">
       <CategoryHeader title={category.title} intro={category.intro} />
@@ -17,7 +17,7 @@ const CategorySection: React.FC<Props> = ({ category }) => (
         <ServiceArticle key={svc.id} service={svc} />
       ))}
     </section>
-  </div>
+  </section>
 );
 
 export default CategorySection;

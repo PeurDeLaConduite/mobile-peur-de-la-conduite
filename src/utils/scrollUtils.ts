@@ -18,17 +18,17 @@ export const useInitialScroll = (pathname: string | null) => {
         resetActiveMenuClasses();
     }, [pathname]);
 };
-export const useScrollAnchors = (sections: { id: string }[]) => {
-    const { setActiveSection } = useScrollContext();
-    useEffect(() => {
-        const handleScroll = () => {
-            scrollInView(sections);
-            addNewUrl(currentSectionId);
-            updateSectionClasses(sections, setActiveSection);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, [sections, setActiveSection]);
-};
+// export const useScrollAnchors = (sections: { id: string }[]) => {
+//     const { setActiveSection } = useScrollContext();
+//     useEffect(() => {
+//         const handleScroll = () => {
+//             scrollInView(sections);
+//             addNewUrl(currentSectionId);
+//             updateSectionClasses(sections, setActiveSection);
+//         };
+//         window.addEventListener("scroll", handleScroll);
+//         return () => {
+//             window.removeEventListener("scroll", handleScroll);
+//         };
+//     }, [sections, setActiveSection]);
+// };

@@ -100,6 +100,7 @@ function elseNav({
 /* eslint-disable-next-line */
 export let currentSectionId = "";
 export function scrollInView(sections: { id: string }[]) {
+    currentSectionId = "";
     const scrollPosition = window.scrollY;
     sections.forEach(({ id }) => {
         const section = document.getElementById(id);

@@ -12,7 +12,8 @@ interface SectionPosition {
     height: number;
 }
 
-export const useScrollAnchors = (sections: { id: string }[]) => {
+// sections parameter is kept for compatibility but current sections are detected dynamically
+export const useScrollAnchors = (_sections: { id: string }[]) => {
     const { setActiveSection } = useScrollContext();
 
     useEffect(() => {
@@ -22,9 +23,16 @@ export const useScrollAnchors = (sections: { id: string }[]) => {
             new URL("../public/workers/scrollWorker.js", import.meta.url)
         );
 
-        // On spécifie ici que positions est un Record<string, SectionPosition>
-        const positions = sections.reduce<Record<string, SectionPosition>>(
-            (acc, { id }) => {
+        let currentSections: { id: string }[] = [];
+
+        const handleScroll = () => {
+            const nodes = Array.from(
+                document.querySelectorAll<HTMLElement>("section[id]")
+            );
+            currentSections = nodes.map((el) => ({ id: el.id }));
+            const positions = currentSections.reduce<
+                Record<string, SectionPosition>
+            >((acc, { id }) => {
                 const section = document.getElementById(id);
                 if (section) {
                     acc[id] = {
@@ -33,13 +41,10 @@ export const useScrollAnchors = (sections: { id: string }[]) => {
                     };
                 }
                 return acc;
-            },
-            {} // le type {} devient Record<string, SectionPosition> grâce au générique
-        );
+            }, {});
 
-        const handleScroll = () => {
             worker.postMessage({
-                sections,
+                sections: currentSections,
                 scrollY: window.scrollY,
                 positions,
             });
@@ -48,17 +53,18 @@ export const useScrollAnchors = (sections: { id: string }[]) => {
         worker.onmessage = (event) => {
             const { currentSectionId } = event.data;
             if (currentSectionId) {
-                scrollInView(sections);
+                scrollInView(currentSections);
                 addNewUrl(currentSectionId);
-                updateSectionClasses(sections, setActiveSection);
+                updateSectionClasses(currentSections, setActiveSection);
             }
         };
 
+        handleScroll();
         window.addEventListener("scroll", handleScroll);
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
             worker.terminate();
         };
-    }, [sections, setActiveSection]);
+    }, [setActiveSection]);
 };

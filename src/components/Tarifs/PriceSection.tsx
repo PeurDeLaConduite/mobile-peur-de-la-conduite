@@ -6,7 +6,7 @@ import CategoryHeader from "./CategoryHeader";
 type Props = { category: CategoryData };
 
 const PriceSection: React.FC<Props> = ({ category }) => (
-    <div id={category.ref}>
+    <section id={category.ref}>
         <div className="fixed-menu" />
         <section className="category">
             <CategoryHeader title={category.title} intro={category.intro} />
@@ -19,7 +19,7 @@ const PriceSection: React.FC<Props> = ({ category }) => (
                 />
             ))}
         </section>
-    </div>
+    </section>
 );
 
 export default PriceSection;
