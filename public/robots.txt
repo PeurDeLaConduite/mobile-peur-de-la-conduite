@@ -4,10 +4,13 @@ Disallow: /src/
 Disallow: /utils/
 Disallow: /app/fonts/
 Disallow: /public/css/
+Disallow: /public/img/
+Disallow: /public/img/
+Disallow: /public/workers/
 
 # Bloquer uniquement les pages sans contenu
 Disallow: /reservation
-Disallow: /mentions-legales
+Disallow: /connection
 
 # Bloquer la page search sur la version mobile
 Disallow: /search
