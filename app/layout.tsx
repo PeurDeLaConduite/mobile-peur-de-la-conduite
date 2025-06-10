@@ -93,10 +93,10 @@ export default function RootLayout({
            <head>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
-                <link rel="preload" href="./css/defer.css" as="style" />
+                <link rel="preload" href="./css/mobileDefer.css" as="style" />
                 <link
                     rel="stylesheet"
-                    href="./css/defer.css"
+                    href="./css/mobileDefer.css"
                     fetchPriority="low"
                 />
                 <script
