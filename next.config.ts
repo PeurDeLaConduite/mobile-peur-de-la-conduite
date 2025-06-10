@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
 
     images: {
         // augmente la mise en cache par défaut du loader next/image
-        minimumCacheTTL: 60 * 60 * 24 * 30, // 30 jours
+        minimumCacheTTL: 60 * 60 * 24 * 365, // 365 jours
     },
 
     async headers() {
