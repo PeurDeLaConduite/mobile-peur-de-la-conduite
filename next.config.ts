@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
     },
 
     images: {
-        // augmente la mise en cache par défaut du loader next/image
+        domains: ["s3.eu-west-3.amazonaws.com"],
         minimumCacheTTL: 60 * 60 * 24 * 365, // 365 jours
     },
 

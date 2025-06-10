@@ -2,6 +2,7 @@
 import React from "react";
 import { Author } from "@src/types/blog";
 
+
 interface AuthorSignatureProps {
     author: Author;
     date: string | Date;
@@ -19,7 +20,8 @@ const formatDate = (date: string | Date) => {
         return date.toString();
     }
 };
-
+const ava =
+    "https://s3.eu-west-3.amazonaws.com/assets.peur-de-la-conduite.fr/img/about/avatar.webp";
 const AuthorSignature: React.FC<AuthorSignatureProps> = ({
     author,
     date,
@@ -41,15 +43,11 @@ const AuthorSignature: React.FC<AuthorSignatureProps> = ({
         </div>
         <div className="avat">
             <img
-                src={author.avatar}
+                src={ava}
                 alt={`avatar de ${author.name}`}
                 className="av  shadow"
             />
-            <img
-                src={author.avatar}
-                alt={`avat de ${author.name}`}
-                className="av "
-            />
+            <img src={ava} alt={`avat de ${author.name}`} className="av " />
         </div>
     </div>
 );
