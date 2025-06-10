@@ -43,6 +43,14 @@ const nextConfig: NextConfig = {
                         value: "public, max-age=31536000, immutable",
                     },
                 ],
+            },            {
+                source: "/img/:path*",
+                headers: [
+                    {
+                        key: "Cache-Control",
+                        value: "public, max-age=31536000, immutable",
+                    },
+                ],
             },
         ];
     },
