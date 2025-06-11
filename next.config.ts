@@ -3,18 +3,18 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
     experimental: {},
 
-    typescript: {
-        // !! WARN !!
-        // Dangerously allow production builds to successfully complete even if
-        // your project has type errors.
-        // !! WARN !!
-        // ignoreBuildErrors: true,
-    },
+    // typescript: {
+    //     // !! WARN !!
+    //     // Dangerously allow production builds to successfully complete even if
+    //     // your project has type errors.
+    //     // !! WARN !!
+    //     // ignoreBuildErrors: true,
+    // },
 
-    images: {
-        domains: ["s3.eu-west-3.amazonaws.com"],
-        minimumCacheTTL: 60 * 60 * 24 * 365, // 365 jours
-    },
+    // images: {
+    //     domains: ["s3.eu-west-3.amazonaws.com"],
+    //     minimumCacheTTL: 60 * 60 * 24 * 365, // 365 jours
+    // },
 
     async headers() {
         return [

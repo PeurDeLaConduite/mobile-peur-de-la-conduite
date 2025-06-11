@@ -15,8 +15,9 @@ export const metadata: Metadata = {
 
 export default async function Page() {
     return (
-        <section className="section" id="s1">
+        <section className="section" id="hs">
             <div className="fixed-menu"></div>
+            <h2>Connexion</h2>
             <Loader />
         </section>
     );

@@ -19,10 +19,7 @@ export default async function Page() {
         <section className="section" id="hs">
             <div className="fixed-menu"></div>
             <h2>Réservation</h2>
-            {/* <p>
-                Cette section n’est pas encore disponible. <Space />
-                Merci de votre patience
-            </p> */}
+    
             <Loader />
         </section>
     );
