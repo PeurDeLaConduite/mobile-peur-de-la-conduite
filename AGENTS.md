@@ -36,8 +36,6 @@ Utilisez les scripts définis dans le `package.json` :
 ## Dépendances clés
 
 -   **Framework** : Next.js v15.0.3
--   **Markdown** : react-markdown v10.1.0 avec remark-gfm
--   **Styles** : Sass 1.60.0
 -   **AWS & Amplify** : aws-amplify 6.9.0 et @aws-amplify/ui-react
 
 ## Tests
