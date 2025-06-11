@@ -21,12 +21,13 @@ const Services: React.FC = () => {
                             height={83}
                             loading="lazy"
                         />
-                        <img
+                        <Image
                             className="srv-img_lesson"
-                            src="https://s3.eu-west-3.amazonaws.com/assets.peur-de-la-conduite.fr/img/services/cours-de-conduite.webp"
-                            alt="cours de conduite"
+                            src="/img/services/cours-de-conduite.webp"
+                            alt="Image cours de conduite"
                             width={288}
                             height={265}
+                            loading="lazy"
                         />
                     </div>
 

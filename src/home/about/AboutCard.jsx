@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import ButtonLink from "../../components/button/ButtonLink";
 
 const AboutCard = ({ cardIdentity, cardContent }) => {
@@ -9,13 +10,13 @@ const AboutCard = ({ cardIdentity, cardContent }) => {
                     {cardIdentity.firstName}
                     <span>{cardIdentity.name}</span>
                 </h3>
-                <img
+                <Image
                     className="ab-img_head"
-                    src="https://s3.eu-west-3.amazonaws.com/assets.peur-de-la-conduite.fr/img/about/avatar.webp"
+                    src="/img/about/avatar.webp"
                     alt={`avatar de ${cardIdentity.firstName}`}
                     width={225}
                     height={225}
-                    // priority={false}
+                    priority={false}
                 />
                 <p className="profession">{cardIdentity.profession}</p>
             </div>

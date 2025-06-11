@@ -11,10 +11,9 @@ const nextConfig: NextConfig = {
     //     // ignoreBuildErrors: true,
     // },
 
-    // images: {
-    //     domains: ["s3.eu-west-3.amazonaws.com"],
-    //     minimumCacheTTL: 60 * 60 * 24 * 365, // 365 jours
-    // },
+    images: {
+        minimumCacheTTL: 60 * 60 * 24 * 365, // 365 jours
+    },
 
     async headers() {
         return [
