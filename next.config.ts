@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
     // },
 
     images: {
+        // domain : "s3.eu-west-3.amazonaws.com/assets.peur-de-la-conduite.fr",
         minimumCacheTTL: 60 * 60 * 24 * 365, // 365 jours
     },
 

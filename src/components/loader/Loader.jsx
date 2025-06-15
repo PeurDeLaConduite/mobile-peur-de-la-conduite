@@ -1,5 +1,4 @@
 import React from "react";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 
 const Loader = () => {
@@ -21,4 +20,4 @@ const Loader = () => {
     );
 };
 
-export default dynamic(() => Promise.resolve(React.memo(Loader)));
+export default React.memo(Loader);

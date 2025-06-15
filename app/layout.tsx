@@ -62,7 +62,7 @@ export const metadata: Metadata = {
 
         icon : [
             { url: "https://s3.eu-west-3.amazonaws.com/assets.peur-de-la-conduite.fr/img/favicon/logo.svg", type: "image/svg+xml" },
-            { url: "https://s3.eu-west-3.amazonaws.com/assets.peur-de-la-conduite.fr/img/favicon/icons/favicon-16x16.png", sizes: "16x16", type: "image/png" },  
+            { url: "https://s3.eu-west-3.amazonaws.com/assets.peur-de-la-conduite.fr/img/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },  
             { url: "https://s3.eu-west-3.amazonaws.com/assets.peur-de-la-conduite.fr/img/favicon/icons/favicon-32x32.png", sizes: "32x32", type: "image/png" },  
             { url: "https://s3.eu-west-3.amazonaws.com/assets.peur-de-la-conduite.fr/img/favicon/icons/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },  
             { url: "https://s3.eu-west-3.amazonaws.com/assets.peur-de-la-conduite.fr/img/favicon/icons/android-chrome-512x512.png", sizes: "512x512", type: "image/png" }, 
@@ -109,7 +109,7 @@ export default function RootLayout({
                         "@id": "https://www.peur-de-la-conduite.fr/",
                         "name": "Peur de la conduite - Coaching Auto",
                         "image": [
-                            "https://www.peur-de-la-conduite.frhttps://s3.eu-west-3.amazonaws.com/assets.peur-de-la-conduite.fr/img/about/avatar.svg"
+                            "https://s3.eu-west-3.amazonaws.com/assets.peur-de-la-conduite.fr/img/about/avatar.webp"
                         ],
                         "url": "https://www.peur-de-la-conduite.fr/",
                         "telephone": "+33 6 74 25 91 81",
