@@ -18,7 +18,7 @@ const ServiceBanner = ({ title }: ServiceBannerProps) => {
             <div className="flx-c icon-description">
                 <Image
                     className="srv-aside-bg"
-                    src="https://s3.eu-west-3.amazonaws.com/assets.peur-de-la-conduite.fr/img/services/Trophy.svg"
+                    src="https://assets.peur-de-la-conduite.fr/img/services/Trophy.svg"
                     alt="Logo Trophy"
                     width={1145}
                     height={1145}
