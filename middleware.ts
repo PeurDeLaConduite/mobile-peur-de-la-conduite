@@ -8,18 +8,34 @@ export function middleware(request: NextRequest) {
     const isTablet =
         /(iPad|Tablet)/i.test(ua) ||
         (/(Android)/i.test(ua) && !/Mobile/i.test(ua));
+
     const isMobile =
         !isTablet &&
         /Mobi|Android|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
 
-    // Si NON mobile (desktop ou tablette) → redirige vers desktop
     if (!isMobile) {
         const destination = `https://desktop.peur-de-la-conduite.fr${request.nextUrl.pathname}${request.nextUrl.search}`;
-        return NextResponse.redirect(destination);
+        const response = NextResponse.redirect(destination);
+        response.cookies.set("deviceType", "desktop", {
+            path: "/",
+            domain: ".peur-de-la-conduite.fr",
+            httpOnly: true,
+            secure: true,
+            sameSite: "strict",
+        });
+        return response;
     }
 
-    // Si mobile → reste sur mobile
-    return NextResponse.next();
+    const response = NextResponse.next();
+    response.cookies.set("deviceType", "mobile", {
+        path: "/",
+        domain: ".peur-de-la-conduite.fr",
+        httpOnly: true,
+        secure: true,
+        sameSite: "strict",
+    });
+
+    return response;
 }
 
 export const config = {
