@@ -27,8 +27,8 @@ const AboutCard = ({ cardIdentity, cardContent }) => {
                         dangerouslySetInnerHTML={{ __html: line }}
                     />
                 ))}
+                <ButtonLink href="/contact">Contacte-moi</ButtonLink>
             </div>
-            <ButtonLink href="/contact">Contactez-moi</ButtonLink>
         </div>
     );
 };

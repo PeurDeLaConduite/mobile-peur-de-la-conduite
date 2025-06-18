@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import dynamic from "next/dynamic";
 import SocialLinks from "../../home/contact-section/contactCard/SocialLinks";
 const Footer = () => {
     return (
@@ -20,4 +19,4 @@ const Footer = () => {
         </footer>
     );
 };
-export default dynamic(() => Promise.resolve(React.memo(Footer)));
+export default React.memo(Footer);

@@ -21,6 +21,7 @@
             "@amplify/*": ["amplify/*"],
             "@components/*": ["src/components/*"],
             "@hooks/*": ["src/hooks/*"],
+            "@assets/*": ["src/assets/*"],
             "@context/*": ["src/context/*"],
             "@utils/*": ["src/utils/*"],
             "@types/*": ["src/types/*"],
@@ -53,7 +54,9 @@
         "src/home/about/LoadMoreButton.jsx",
         "src/home/contact-section/contactForm/form.jsx",
         "src/home/contact-section/contactForm/formSuite.jsx",
-        "src/home/slider/sliderItem/SldTitle.jsx"
+        "src/home/slider/sliderItem/SldTitle.jsx",
+        ".stock/middleware.ts",
+        "src/components/LazyWrapper.tsx"
     ],
     "exclude": ["node_modules"]
 }

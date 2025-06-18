@@ -1,11 +1,11 @@
-import { lazy, Suspense } from "react";
-import Loader from "../../../components/loader/Loader";
+import { lazy } from "react";
+import LazyWrapper from "@/src/components/LazyWrapper";
 
 const Beginner = lazy(() => import("./beginner"));
 const BeginnerLazy = () => (
-    <Suspense fallback={<Loader />}>
+    <LazyWrapper>
         <Beginner />
-    </Suspense>
+    </LazyWrapper>
 );
 
 export default BeginnerLazy;

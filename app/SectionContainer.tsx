@@ -1,8 +1,4 @@
-import React, { lazy } from "react";
-import LazyWrapper from "@/src/components/LazyWrapper";
-// Chargement différé
-const SectionPageContainer = lazy(() => import("./SectionContainer"));
-
+import React from "react";
 type SectionContainerProps = {
     children: React.ReactNode;
     id?: string;
@@ -17,11 +13,17 @@ const SectionContainer = React.memo(function SectionContainer({
     icon,
 }: SectionContainerProps) {
     return (
-        <LazyWrapper>
-            <SectionPageContainer id={id} title={title} icon={icon}>
+        <section className="section page" id={id}>
+            <div className="fixed-menu" />
+            <div className="container">
+                <div className="page-tle">
+                    {icon}
+                    <h1 className="title">{title}</h1>
+                </div>
+                <div className="fixed-menu" />
                 {children}
-            </SectionPageContainer>
-        </LazyWrapper>
+            </div>
+        </section>
     );
 });
 

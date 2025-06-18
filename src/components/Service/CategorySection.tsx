@@ -1,5 +1,5 @@
 // src/components/CategorySection.tsx
-"use client";
+// "use client";
 import React from "react";
 import type { CategoryData } from "@src/home/service/Component/servicesTypes";
 import CategoryHeader from "../Tarifs/CategoryHeader";

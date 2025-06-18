@@ -3,10 +3,10 @@ import { ServiceContent, ServiceForm } from "../interfaces/content";
 export const serviceContent: ServiceContent[] = [
     {
         description:
-            "<strong>Découvre un aperçu de mes services !</strong><br /><br />" +
-            "👉 Je les ai spécialement conçus afin de répondre aux besoins de <strong>tous les conducteurs</strong> !<br /><br />" +
-            "✔️ Débutants<br />" +
-            "✔️ Confirmés",
+            "<strong>Envie d’en savoir plus ?<br />Découvre un aperçu de mes services !</strong><br /><br />" +
+            "👉 Je les ai spécialement conçus afin  de répondre aux besoins de <strong>tous les conducteurs</strong> !<br /><br />" +
+            "✔️ Conducteurs débutants<br />" +
+            "✔️ Conducteurs confirmés",
     },
 ];
 

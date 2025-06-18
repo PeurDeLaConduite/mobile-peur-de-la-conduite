@@ -1,6 +1,10 @@
 import { Metadata } from "next";
-import React from "react";
-import LazyPage from "./lazyPage";
+import PageLazyLoader from "@components/PageLazyLoader";
+import dynamic from "next/dynamic";
+const LazyPage = dynamic(() => import("./lazyPage"), {
+    loading: () => null,
+    ssr: true,
+});
 export const metadata: Metadata = {
     title: "Nos Tarifs",
     alternates: {
@@ -14,5 +18,9 @@ export const metadata: Metadata = {
     },
 };
 export default function Page() {
-    return <LazyPage />;
+    return (
+        <PageLazyLoader>
+            <LazyPage />
+        </PageLazyLoader>
+    );
 }

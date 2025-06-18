@@ -1,5 +1,10 @@
-import Loader from "../../src/components/loader/Loader";
 import { Metadata } from "next";
+import PageLazyLoader from "@components/PageLazyLoader";
+import dynamic from "next/dynamic";
+const LazyPage = dynamic(() => import("./lazyPage"), {
+    loading: () => null,
+    ssr: true,
+});
 export const metadata: Metadata = {
     title: "Réservation",
     alternates: {
@@ -16,11 +21,8 @@ export const metadata: Metadata = {
 export default async function Page() {
     // await new Promise((r) => setTimeout(r, 1000));
     return (
-        <section className="section" id="hs">
-            <div className="fixed-menu"></div>
-            <h2>Réservation</h2>
-    
-            <Loader />
-        </section>
+        <PageLazyLoader>
+            <LazyPage />
+        </PageLazyLoader>
     );
 }

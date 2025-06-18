@@ -1,21 +1,14 @@
-"use client";
-import React, { lazy, Suspense } from "react";
+import React, { lazy } from "react";
+import LazyWrapper from "@/src/components/LazyWrapper";
 import PageContainer from "../PageContainer";
 import ContactIcon from "../../src/components/svg_Icon/Contact";
-import dynamic from "next/dynamic";
-import Loader from "../../src/components/loader/Loader";
-const DrivingProvider = dynamic(
-    () => import("../../src/utils/context/DrivingContext"),
-    {
-        ssr: false,
-        loading: () => <Loader />,
-    }
-);
+import DrivingLazyWrapper from "@src/components/DrivingLazyWrapper";
 const ContactHome = lazy(() => import("../../src/home/contact-section"));
+
 const LazyPage = () => {
     return (
-        <DrivingProvider>
-            <Suspense fallback={<Loader />}>
+        <LazyWrapper>
+            <DrivingLazyWrapper>
                 <PageContainer
                     id="contact"
                     title="Contact"
@@ -23,8 +16,8 @@ const LazyPage = () => {
                 >
                     <ContactHome />
                 </PageContainer>
-            </Suspense>
-        </DrivingProvider>
+            </DrivingLazyWrapper>
+        </LazyWrapper>
     );
 };
 export default LazyPage;

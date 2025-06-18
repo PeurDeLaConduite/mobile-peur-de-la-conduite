@@ -1,4 +1,10 @@
 import { Metadata } from "next";
+import PageLazyLoader from "@components/PageLazyLoader";
+import dynamic from "next/dynamic";
+const LazyPage = dynamic(() => import("./lazyPage"), {
+    loading: () => null,
+    ssr: true,
+});
 export const metadata: Metadata = {
     title: "Mentions-légales",
     alternates: {
@@ -11,16 +17,11 @@ export const metadata: Metadata = {
         },
     },
 };
-import LegalNotices from "../../src/components/Legal/LegalNotices";
 
 export default async function Page() {
     return (
-        <section className="section" id="s1">
-            <div className="fixed-menu"></div>
-            <div className="s1">
-                <h1 className="pp_title">Mentions légales</h1>
-                <LegalNotices />
-            </div>
-        </section>
+        <PageLazyLoader>
+            <LazyPage />
+        </PageLazyLoader>
     );
 }

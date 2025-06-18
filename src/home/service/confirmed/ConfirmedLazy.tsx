@@ -1,11 +1,11 @@
-import { lazy, Suspense } from "react";
-import Loader from "../../../components/loader/Loader";
+import { lazy } from "react";
+import LazyWrapper from "@/src/components/LazyWrapper";
 
 const Confirmed = lazy(() => import("./confirmed"));
 const ConfirmedLazy = () => (
-    <Suspense fallback={<Loader />}>
+    <LazyWrapper>
         <Confirmed />
-    </Suspense>
+    </LazyWrapper>
 );
 
 export default ConfirmedLazy;

@@ -1,9 +1,11 @@
 // app/blog/page.tsx
 import { Metadata } from "next";
-import PageContainer from "../PageContainer";
-import BlogClientWrapper from "./BlogClientWrapper";
-import BlogIcon from "@components/svg_Icon/Blog";
-
+import PageLazyLoader from "@components/PageLazyLoader";
+import dynamic from "next/dynamic";
+const LazyPage = dynamic(() => import("./lazyPage"), {
+    loading: () => null,
+    ssr: true,
+});
 export const metadata: Metadata = {
     title: "Blog",
     alternates: {
@@ -21,13 +23,8 @@ export const metadata: Metadata = {
 
 export default async function Page() {
     return (
-        <PageContainer id="blog" title="Blog" icon={<BlogIcon />}>
-            {/* <p className="btn-SB flx-c">
-                Retrouvez ici nos articles sur l’amaxophobie, les techniques de
-                gestion du stress et le coaching pour réussir votre permis.
-            </p> */}
-
-            <BlogClientWrapper />
-        </PageContainer>
+        <PageLazyLoader>
+            <LazyPage />
+        </PageLazyLoader>
     );
 }

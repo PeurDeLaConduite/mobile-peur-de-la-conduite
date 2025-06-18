@@ -1,8 +1,11 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { serviceContent } from "../../assets/data/content/services";
-import ButtonLink from "@components/button/ButtonLink";
+import DriveQuestions from "../questions/driveQuestions";
+import AccQuestions from "../questions/accompanistQuestions";
+import PermitStatus from "../permitStatus";
+import { serviceContent } from "@assets/data/content/services";
+import DrivingLazyWrapper from "@src/components/DrivingLazyWrapper";
 const Services: React.FC = () => {
     return (
         <>
@@ -34,14 +37,13 @@ const Services: React.FC = () => {
                                 __html: serviceContent[0].description,
                             }}
                         />
-                        <ButtonLink href="services">
-                        Choisis ton coaching 👈
-                        </ButtonLink>
                     </div>
-                    {/* <ButtonLink href="services">
-                            Découvrir les services
-                        </ButtonLink> */}
-                    {/* <div className="card_cnt"></div> */}
+                    <div className="card_cnt">
+                        <DrivingLazyWrapper>
+                            <DriveQuestions />
+                            <AccQuestions />
+                        </DrivingLazyWrapper>
+                    </div>
                     {/**
                      * //! if hasPermit === true && supervisedDriving === true
                      * //! return <AccQuestions/>
@@ -52,7 +54,7 @@ const Services: React.FC = () => {
              * //! if hasPermit === true  => <Confirmed />
              * //! if hasPermit === false => <Beginner />
              */}
-            {/* <PermitStatus /> */}
+            <PermitStatus />
         </>
     );
 };

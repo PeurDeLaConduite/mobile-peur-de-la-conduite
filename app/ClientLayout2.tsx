@@ -1,15 +1,14 @@
-"use client";
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
+import LazyWrapper from "@/src/components/LazyWrapper";
 const ScrollSectionsWrapper = lazy(() => import("./ScrollSectionsWrapper"));
 const ScrollProvider = lazy(() => import("../src/utils/context/ScrollContext"));
-import Loader from "../src/components/loader/Loader";
 const ClientLayout2 = ({ children }: { children: React.ReactNode }) => {
     return (
-        <Suspense fallback={<Loader />}>
+        <LazyWrapper>
             <ScrollProvider>
                 <ScrollSectionsWrapper>{children}</ScrollSectionsWrapper>
             </ScrollProvider>
-        </Suspense>
+        </LazyWrapper>
     );
 };
 

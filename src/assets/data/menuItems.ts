@@ -31,12 +31,6 @@ export const menuItems: MenuLinks = {
                     AnchorId: "#services",
                     class: "",
                 },
-                {
-                    id: "menu-contact",
-                    title: "Contact",
-                    AnchorId: "#contact",
-                    class: "",
-                },
             ],
         },
         {

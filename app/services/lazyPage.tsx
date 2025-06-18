@@ -1,24 +1,16 @@
-"use client";
-import React, { lazy, Suspense } from "react";
+import { lazy } from "react";
 import PageContainer from "../PageContainer";
 import ServicesIcon from "../../src/components/svg_Icon/Services";
-import dynamic from "next/dynamic";
 import { servicesData } from "../../src/home/service/Component/servicesData";
-import Loader from "../../src/components/loader/Loader";
-const DrivingProvider = dynamic(
-    () => import("../../src/utils/context/DrivingContext"),
-    {
-        ssr: false,
-        loading: () => <Loader />,
-    }
-);
+import DrivingLazyWrapper from "@src/components/DrivingLazyWrapper";
+import LazyWrapper from "@/src/components/LazyWrapper";
 const CategorySection = lazy(() =>
     import("@src/components/Service/CategorySection")
 );
 const LazyPage = () => {
     return (
-        <DrivingProvider>
-            <Suspense fallback={<Loader />}>
+        <DrivingLazyWrapper>
+            <LazyWrapper>
                 <PageContainer
                     id="services-page"
                     title="Nos Services"
@@ -28,8 +20,8 @@ const LazyPage = () => {
                         <CategorySection key={cat.id} category={cat} />
                     ))}
                 </PageContainer>
-            </Suspense>
-        </DrivingProvider>
+            </LazyWrapper>
+        </DrivingLazyWrapper>
     );
 };
 export default LazyPage;

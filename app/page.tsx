@@ -1,14 +1,13 @@
-import React, { lazy } from "react";
+import { lazy } from "react";
+import LazyWrapper from "@/src/components/LazyWrapper";
 import { Metadata } from "next";
 import Slider from "../src/home/slider/Slider";
-import Loader from "../src/components/loader/Loader";
 
 export const metadata: Metadata = {
     title: "Accueil | Peur de la conduite",
 };
-// import HomeOut from "./outPage";
 const About = lazy(() => import("../src/home/about"));
-const HomeOut = lazy(() => import("./outPage"));
+const HomeOut = lazy(() => import("./HomeOut"));
 export default function Home() {
     return (
         <>
@@ -18,9 +17,9 @@ export default function Home() {
             <section className="section about-bg" id="about">
                 <div className="fixed-menu"></div>
 
-                <React.Suspense fallback={<Loader />}>
+                <LazyWrapper>
                     <About />
-                </React.Suspense>
+                </LazyWrapper>
             </section>
             <HomeOut />
         </>

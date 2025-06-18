@@ -10,6 +10,7 @@ const About = () => {
                     alt="Info Icon"
                     width="540"
                     height="540"
+                    priority
                 />
             </div>
             {aboutContent.map((content, index) => (
