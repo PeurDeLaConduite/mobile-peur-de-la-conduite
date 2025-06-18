@@ -4,7 +4,7 @@ import React, {
     useState,
     ReactNode,
     useMemo,
-    useEffect,
+    // useEffect,
 } from "react";
 import { sliderContent } from "../../../assets/data/content/slider";
 import { useSlides } from "./useSlides";
@@ -40,13 +40,13 @@ export const SliderProvider = ({ children }: { children: ReactNode }) => {
         sliderContent.length
     );
 
-    useEffect(() => {
-        const savedSlideRef = sessionStorage.getItem("slideRef");
-        if (savedSlideRef === null) {
-            const timer = setTimeout(() => setCurrentSlide(1), 2400);
-            return () => clearTimeout(timer);
-        }
-    }, []);
+    // useEffect(() => {
+    //     // const savedSlideRef = sessionStorage.getItem("slideRef");
+    //     // if (savedSlideRef === null) {
+    //     //     const timer = setTimeout(() => setCurrentSlide(1), 2400);
+    //     //     return () => clearTimeout(timer);
+    //     // }
+    // }, []);
 
     const contextValue = useMemo(
         () => ({
