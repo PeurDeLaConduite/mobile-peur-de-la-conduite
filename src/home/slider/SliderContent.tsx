@@ -1,9 +1,11 @@
 "use client";
-import React, { lazy, Suspense } from "react";
-// import SliderIntro from "./SliderContentIntro";
+import React, { Suspense } from "react";
+import dynamic from "next/dynamic";
 import Loader from "@/src/components/loader/Loader";
-// import LazyWrapper from "@/src/components/LazyWrapper";
-const ClientSldProvider = lazy(() => import("./ClientSldProvider"));
+const ClientSldProvider = dynamic(() => import("./ClientSldProvider"), {
+    ssr: false,
+    loading: () => <Loader />,
+});
 
 const SliderContent = () => {
     return (
