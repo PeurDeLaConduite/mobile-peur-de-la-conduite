@@ -1,24 +1,13 @@
 "use client";
-import React, { useState, lazy, Suspense } from "react";
-import useT from "../../hook/useTimeoutWorker";
-
-import SliderIntro from "./SliderContentIntro";
-
+import React, { lazy, Suspense } from "react";
+// import SliderIntro from "./SliderContentIntro";
+import Loader from "@/src/components/loader/Loader";
+// import LazyWrapper from "@/src/components/LazyWrapper";
 const ClientSldProvider = lazy(() => import("./ClientSldProvider"));
 
 const SliderContent = () => {
-    const [showSlider, setShowSlider] = useState(false);
-
-    useT(() => {
-        setShowSlider(true);
-    }, 2400);
-
-    if (!showSlider) {
-        return <SliderIntro />;
-    }
-
     return (
-        <Suspense fallback={<SliderIntro />}>
+        <Suspense fallback={<Loader />}>
             <ClientSldProvider />
         </Suspense>
     );
