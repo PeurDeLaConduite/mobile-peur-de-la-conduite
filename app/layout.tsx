@@ -47,6 +47,7 @@ export default function RootLayout({
                     href="https://assets.peur-de-la-conduite.fr/img/retroviseur.svg"
                     as="image"
                 />
+
                 <link rel="preload" href="/css/globals.css" as="style" />
                 <link
                     rel="stylesheet"
@@ -59,6 +60,7 @@ export default function RootLayout({
                     href="/css/mobileDefer.css"
                     fetchPriority="low"
                 />
+
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
@@ -102,6 +104,22 @@ export default function RootLayout({
                                     ],
                                     opens: "07:00",
                                     closes: "20:00",
+                                },
+                            ],
+                            priceRange: "39.99€ - 59.99€",
+                            offers: [
+                                {
+                                    "@type": "Offer",
+                                    name: "Coaching Conducteurs Débutants",
+                                    price: "39.99",
+                                    priceCurrency: "EUR",
+                                },
+                                {
+                                    "@type": "Offer",
+                                    name:
+                                        "Coaching Conducteurs Confirmés (Amaxophobie)",
+                                    price: "49.99",
+                                    priceCurrency: "EUR",
                                 },
                             ],
                             sameAs: [

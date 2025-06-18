@@ -9,7 +9,7 @@ const ContactBackGround = () => {
             alt="Decorative background for contact section"
             width={1440}
             height={1587}
-            loading="lazy"
+            priority
         />
     );
 };
