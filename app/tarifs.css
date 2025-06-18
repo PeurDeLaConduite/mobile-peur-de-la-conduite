@@ -674,6 +674,8 @@ form.srv-form label {
 .contact {
     margin-bottom: 64px;
     filter: drop-shadow(var(--S_0420) var(--bkR035));
+    min-width: 360px;
+    max-width: 396px;
 }
 .contact .contact-bg {
     position: relative;
@@ -682,6 +684,7 @@ form.srv-form label {
     width: 100%;
     height: auto;
     z-index: 0;
+    margin: 0 auto;
 }
 .contact .ctc-content {
     position: relative;
@@ -689,7 +692,6 @@ form.srv-form label {
     width: 100%;
     height: 100%;
     padding: 1rem;
-    margin: 0 auto;
 }
 .ctc-content img.contact-bg {
     position: absolute;
@@ -722,8 +724,8 @@ form.srv-form label {
     background: var(--yR035);
 }
 #contact {
-    padding: 0 0.5rem;
-    background-color: var(--y);
+    /* padding: 0 0.25rem; */
+    background-color: var(--bl3);
 }
 #contact .container {
     padding: 0.5rem 0;
@@ -838,9 +840,12 @@ form.srv-form label {
     min-width: calc(100% + 0.5rem);
     margin: 0 auto;
     height: auto;
-    padding: 18px 12px;
+    padding: 1rem;
     background: var(--w);
-    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 0.5rem;
     box-shadow: inset var(--S_044) var(--bkR025);
     position: relative;
     left: -0.25rem;
@@ -872,6 +877,7 @@ form.srv-form label {
 }
 .ctc-layout .ctc-form .form-questions .questions p {
     font-weight: 600;
+    font-size: 1.115rem;
 }
 .ctc-layout .ctc-form .form-questions .questions .response {
     display: inline-flex;
@@ -879,7 +885,8 @@ form.srv-form label {
     align-items: center;
     width: 100%;
     gap: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.115rem;
+    font-family: var(--FtN);
     margin: 1rem 0 0 24px;
 }
 .ctc-layout .ctc-form .form-questions label,
@@ -902,10 +909,10 @@ form.srv-form label {
     width: 100%;
 }
 .ctc-layout .ctc-form .form label {
-    font-family: var(--FtR);
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
+    font-family: var(--FtN);
+    font-size: 1.115rem;
+    /* font-style: bold; */
+    font-weight: 500;
     line-height: 1.25rem;
     color: var(--bk2);
     text-align: justify;
@@ -1182,7 +1189,7 @@ h2.pp_title {
     align-items: center;
     padding: 0;
     gap: 12px;
-    margin: 16px 0 0 16px;
+    margin: 16px auto 0 auto;
     filter: drop-shadow(var(--S_224) var(--bkR05));
 }
 .coach,
