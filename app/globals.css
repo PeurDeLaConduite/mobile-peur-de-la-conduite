@@ -706,6 +706,7 @@ p.p-info_ctn {
     opacity: 0;
     animation: 1.5s ease-in-out infinite pulse;
     z-index: 1000;
+    border-radius: 50%;
     background: var(--bk);
 }
 .ld-dot {
@@ -739,16 +740,13 @@ p.p-info_ctn {
     0% {
         transform: scale(0);
         opacity: 0;
-        border-radius: 25%;
     }
     50% {
         transform: scale(1.5);
         opacity: 1;
-        border-radius: 50%;
     }
     100% {
         transform: scale(0);
-        border-radius: 25%;
         opacity: 0;
     }
 }
