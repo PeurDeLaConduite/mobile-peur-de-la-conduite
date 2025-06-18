@@ -53,13 +53,30 @@ export default function RootLayout({
                     rel="stylesheet"
                     href="/css/globals.css"
                     fetchPriority="high"
-                />
-                <link rel="preload" href="/css/mobileDefer.css" as="style" />
+                /> */}
+
+                {/* <link rel="preload" href="/css/mobileDefer.css" as="style" />
                 <link
                     rel="stylesheet"
                     href="/css/mobileDefer.css"
                     fetchPriority="low"
                 /> */}
+
+{/* <>
+  <script
+    dangerouslySetInnerHTML={{
+      __html: `
+        var l = document.createElement('link');
+        l.rel = 'stylesheet';
+        l.href = '/css/mobileDefer.css';
+        document.head.appendChild(l);
+      `,
+    }}
+  />
+  <noscript>
+    <link rel="stylesheet" href="/css/mobileDefer.css" fetchPriority="low"/>
+  </noscript>
+</> */}
 
                 <script
                     type="application/ld+json"

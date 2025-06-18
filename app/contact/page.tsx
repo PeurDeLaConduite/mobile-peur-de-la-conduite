@@ -5,7 +5,7 @@ const LazyPage = dynamic(() => import("./lazyPage"), {
     loading: () => null, // déjà géré par PageLazyLoader
     ssr: true, // facultatif car true par défaut
 });
-
+import ContactBackGround from "@/src/home/contact-section/contactBackGround";
 export const metadata: Metadata = {
     title: "Contact",
     description:
@@ -61,6 +61,7 @@ export const metadata: Metadata = {
 export default function Page() {
     return (
         <PageLazyLoader>
+            {/* <ContactBackGround /> */}
             <LazyPage />
         </PageLazyLoader>
     );
