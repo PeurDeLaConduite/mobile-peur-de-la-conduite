@@ -677,7 +677,15 @@ form.srv-form label {
     min-width: 360px;
     max-width: 396px;
 }
-
+.contact .contact-bg {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    margin: 0 auto;
+}
 .contact .ctc-content {
     position: relative;
     z-index: 1;
@@ -685,7 +693,15 @@ form.srv-form label {
     height: 100%;
     padding: 1rem;
 }
-
+.ctc-content img.contact-bg {
+    position: absolute;
+    border-radius: 0.75rem;
+    z-index: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    box-shadow: var(--S_0420) var(--bkR01);
+}
 .ctc-content .ctc-layout {
     position: relative;
     width: 100%;
@@ -699,13 +715,6 @@ form.srv-form label {
     width: 100%;
     text-align: left;
 }
-
-#contact {
-    background-color: var(--bl3);
-}
-#contact .container {
-    padding: 0.5rem 0;
-}
 .contact .ctc-announcement {
     margin: 0;
     width: -moz-fit-content;
@@ -713,6 +722,13 @@ form.srv-form label {
     padding: 8px;
     border-radius: 16px;
     background: var(--yR035);
+}
+#contact {
+    /* padding: 0 0.25rem; */
+    background-color: var(--bl3);
+}
+#contact .container {
+    padding: 0.5rem 0;
 }
 .contact .ctc-announcement img {
     width: 40px;
@@ -759,14 +775,16 @@ form.srv-form label {
 }
 .contact .ctc-social_C {
     padding: 1.5rem 1rem 2.25rem;
-    display: flex;
-    flex-flow: column wrap;
 }
 .contact .ctc-card img,
 .contact .ctc-social_C img {
     width: 40px;
     height: 40px;
     margin-bottom: 15px;
+}
+.contact .ctc-social_C {
+    display: flex;
+    flex-flow: column wrap;
 }
 .contact .ctc-social_C p {
     width: 100%;
@@ -887,11 +905,13 @@ form.srv-form label {
     background: var(--bk);
 }
 .ctc-layout .ctc-form .endOF {
+    /* height: 1px; */
     width: 100%;
 }
 .ctc-layout .ctc-form .form label {
     font-family: var(--FtN);
     font-size: 1.115rem;
+    /* font-style: bold; */
     font-weight: 500;
     line-height: 1.25rem;
     color: var(--bk2);
@@ -928,7 +948,7 @@ form.srv-form label {
     position: relative;
     top: 0;
     gap: 0;
-    margin: 2rem 0;
+    margin: 2rem 0 2rem;
 }
 .ctc-layout .ctc-form .cgu .questions {
     display: inline-flex;
@@ -936,6 +956,8 @@ form.srv-form label {
     gap: 0.5rem;
     justify-content: flex-start;
     align-items: flex-start;
+    /* align-items: center; */
+    /* border: 1px solid #000; */
     margin: 0 0 0.75rem;
 }
 .ctc-layout .ctc-form .cgu .questions p {
@@ -949,7 +971,8 @@ form.srv-form label {
 .ctc-layout .ctc-form .cgu .questions .response {
     position: relative;
     margin: inherit;
-    left: 0;
+    /* display: block; */
+    left: 0px;
     top: 4px;
     width: 40px;
 }
@@ -1166,7 +1189,7 @@ h2.pp_title {
     align-items: center;
     padding: 0;
     gap: 12px;
-    margin: 16px auto 0;
+    margin: 16px auto 0 auto;
     filter: drop-shadow(var(--S_224) var(--bkR05));
 }
 .coach,
