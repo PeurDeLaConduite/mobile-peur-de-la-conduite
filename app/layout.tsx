@@ -3,7 +3,7 @@ import metaData from "./metaData";
 import localFont from "next/font/local";
 import HeaderLazy from "../src/components/header/HeaderLazy";
 import ClientLayout from "./ClientLayout";
-// import "./globals.css";
+import "./globals.css";
 import "./tarifs.css";
 import { lazy } from "react";
 import LazyWrapper from "@/src/components/LazyWrapper";
@@ -150,7 +150,7 @@ export default function RootLayout({
                 />
             </head>
             <body
-                className={`${Montserrat.variable} ${Roboto.variable} ${Nunito.variable}`}
+                className={`${Montserrat.variable} ${Roboto.variable} ${Nunito.variable}`} id="top"
             >
                 <ClientLayout>
                     <header>
