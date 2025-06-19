@@ -37,9 +37,8 @@ export function DataBlogProvider({ children }: { children: ReactNode }) {
             const json = (await res.json()) as BlogData;
             setData(json);
             setError(null);
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (err) {
-            setError(err);
+            setError(err as Error);
         } finally {
             setLoading(false);
         }
