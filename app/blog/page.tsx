@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Blog",
+    title: "Blog | Peur de la conduite",
     description: "Découvrez des articles dédiés à la peur de conduire : conseils pratiques, gestion du stress, dépassement des blocages et préparation à la conduite en toute confiance. Par Mounir Bouakkaz, coaching conduite et anti-amaxophobie au Havre.",
     alternates: {
         canonical: "https://peur-de-la-conduite.fr/blog",
