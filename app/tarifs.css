@@ -843,8 +843,6 @@ form.srv-form label {
     padding: 1rem;
     background: var(--w);
     background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border-radius: 0.5rem;
     box-shadow: inset var(--S_044) var(--bkR025);
     position: relative;
