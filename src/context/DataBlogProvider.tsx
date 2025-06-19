@@ -2,12 +2,12 @@
 "use client";
 import React, {
     createContext,
-    useContext,
     useState,
     useEffect,
     ReactNode,
     useMemo,
 } from "react";
+import { createUseContext } from "../utils/context/utils/createUseContext"; 
 import type { BlogData } from "@src/types/blog";
 
 const PUBLIC_DATA_URL =
@@ -19,7 +19,9 @@ interface DataBlogContextProps {
     error: Error | null;
 }
 
-const DataBlogContext = createContext<DataBlogContextProps | undefined>(undefined);
+const DataBlogContext = createContext<DataBlogContextProps | undefined>(
+    undefined
+);
 
 export function DataBlogProvider({ children }: { children: ReactNode }) {
     const [data, setData] = useState<BlogData | null>(null);
@@ -36,7 +38,7 @@ export function DataBlogProvider({ children }: { children: ReactNode }) {
             setData(json);
             setError(null);
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        } catch (err: any) {
+        } catch (err) {
             setError(err);
         } finally {
             setLoading(false);
@@ -47,11 +49,11 @@ export function DataBlogProvider({ children }: { children: ReactNode }) {
         fetchData();
     }, []);
 
-
-    const value = useMemo(
-        () => ({ data, loading, error }),
-        [data, loading, error]
-    );
+    const value = useMemo(() => ({ data, loading, error }), [
+        data,
+        loading,
+        error,
+    ]);
 
     return (
         <DataBlogContext.Provider value={value}>
@@ -59,9 +61,4 @@ export function DataBlogProvider({ children }: { children: ReactNode }) {
         </DataBlogContext.Provider>
     );
 }
-
-export function useDataBlog() {
-    const ctx = useContext(DataBlogContext);
-    if (!ctx) throw new Error("useDataBlog doit être utilisé dans un DataBlogProvider");
-    return ctx;
-}
+export const useDataBlog = createUseContext(DataBlogContext, "useDataBlog");

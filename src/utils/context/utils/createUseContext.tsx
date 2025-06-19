@@ -1,5 +1,7 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */ import { useContext } from "react";
+
+import { useContext } from "react";
 export const createUseContext = <T,>(
+    /* eslint-disable @typescript-eslint/no-explicit-any */ 
     context: React.Context<T | any>,
     name: string
 ) => {
@@ -15,4 +17,4 @@ export const createUseContext = <T,>(
         }
         return ctx;
     };
-}; /* eslint-enable @typescript-eslint/no-explicit-any */
+};

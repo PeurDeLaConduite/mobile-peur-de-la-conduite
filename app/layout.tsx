@@ -3,8 +3,8 @@ import metaData from "./metaData";
 import localFont from "next/font/local";
 import HeaderLazy from "../src/components/header/HeaderLazy";
 import ClientLayout from "./ClientLayout";
-import "./globals.css";
-// import "./tarifs.css";
+// import "./globals.css";
+import "./tarifs.css";
 import { lazy } from "react";
 import LazyWrapper from "@/src/components/LazyWrapper";
 const Footer = lazy(() => import("../src/components/footer/footer"));
@@ -36,12 +36,6 @@ export default function RootLayout({
     return (
         <html lang="fr-FR">
             <head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link
-                    rel="preconnect"
-                    href="https://fonts.gstatic.com"
-                    crossOrigin=""
-                />
                 <link
                     rel="preload"
                     href="https://assets.peur-de-la-conduite.fr/img/retroviseur.svg"
@@ -55,28 +49,28 @@ export default function RootLayout({
                     fetchPriority="high"
                 /> */}
 
-                <link rel="preload" href="/css/mobileDefer.css" as="style" />
+                {/* <link rel="preload" href="/css/mobileDefer.css" as="style" />
                 <link
                     rel="stylesheet"
                     href="/css/mobileDefer.css"
                     fetchPriority="low"
-                />
+                /> */}
 
-{/* <>
-  <script
-    dangerouslySetInnerHTML={{
-      __html: `
-        var l = document.createElement('link');
-        l.rel = 'stylesheet';
-        l.href = '/css/mobileDefer.css';
-        document.head.appendChild(l);
-      `,
-    }}
-  />
-  <noscript>
-    <link rel="stylesheet" href="/css/mobileDefer.css" fetchPriority="low"/>
-  </noscript>
-</> */}
+                {/* <>
+                <script
+                    dangerouslySetInnerHTML={{
+                    __html: `
+                        var l = document.createElement('link');
+                        l.rel = 'stylesheet';
+                        l.href = '/css/mobileDefer.css';
+                        document.head.appendChild(l);
+                    `,
+                    }}
+                />
+                <noscript>
+                    <link rel="stylesheet" href="/css/mobileDefer.css" fetchPriority="low"/>
+                </noscript>
+                </> */}
 
                 <script
                     type="application/ld+json"
