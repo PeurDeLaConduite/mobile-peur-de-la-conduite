@@ -8,6 +8,7 @@ import "./tarifs.css";
 import { lazy } from "react";
 import LazyWrapper from "@/src/components/LazyWrapper";
 const Footer = lazy(() => import("../src/components/footer/footer"));
+import DesktopRedirect from "./DesktopRedirect";
 const Montserrat = localFont({
     src: "./fonts/Montserrat.woff2",
     variable: "--montserrat",
@@ -152,6 +153,7 @@ export default function RootLayout({
             <body
                 className={`${Montserrat.variable} ${Roboto.variable} ${Nunito.variable}`} id="top"
             >
+                <DesktopRedirect />
                 <ClientLayout>
                     <header>
                         <div className="content-wrapper">
