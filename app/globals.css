@@ -343,6 +343,7 @@ header {
 }
 .header .absolute {
     position: absolute;
+    /* z-index: 1000; */
     left: 0;
     top: -23px;
     width: 100vw;
@@ -653,19 +654,17 @@ p.p-info_ctn {
     position: fixed;
     height: 100vh;
     width: 100vw;
-    z-index: 900;
+    z-index: 99;
     flex-flow: column;
     align-items: center;
     justify-content: center;
 }
 #slider .slide {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 2.5s, transform 2.5s;
+    transition: opacity 0.75s;
 }
 #slider.active-section .slide {
     opacity: 1;
-    transform: translateY(0);
 }
 .loader p {
     width: 75vw;

@@ -99,20 +99,12 @@ function elseNav({
 }
 /* eslint-disable-next-line */
 export let currentSectionId = "";
-export function scrollInView(sections: { id: string }[]) {
-    currentSectionId = "";
-    const scrollPosition = window.scrollY;
-    sections.forEach(({ id }) => {
-        const section = document.getElementById(id);
-        if (section) {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const isInView =
-                scrollPosition >= sectionTop - 100 &&
-                scrollPosition < sectionTop + sectionHeight;
-            if (isInView) {
-                currentSectionId = id;
-            }
+export function handleSectionIntersection(
+    entries: IntersectionObserverEntry[]
+) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.target instanceof HTMLElement) {
+            currentSectionId = entry.target.id;
         }
     });
 }

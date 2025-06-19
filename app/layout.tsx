@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import HeaderLazy from "../src/components/header/HeaderLazy";
 import ClientLayout from "./ClientLayout";
 import "./globals.css";
-import "./tarifs.css";
+// import "./tarifs.css";
 import { lazy } from "react";
 import LazyWrapper from "@/src/components/LazyWrapper";
 const Footer = lazy(() => import("../src/components/footer/footer"));
@@ -55,12 +55,12 @@ export default function RootLayout({
                     fetchPriority="high"
                 /> */}
 
-                {/* <link rel="preload" href="/css/mobileDefer.css" as="style" />
+                <link rel="preload" href="/css/mobileDefer.css" as="style" />
                 <link
                     rel="stylesheet"
                     href="/css/mobileDefer.css"
                     fetchPriority="low"
-                /> */}
+                />
 
 {/* <>
   <script
