@@ -90,7 +90,7 @@ export const menuItems: MenuLinks = {
         {
             id: "connection",
             title: "Se connecter",
-            class: "",
+            class: "connection",
             path: "/connection",
             AnchorId: "#top",
             svg: "Connection",
