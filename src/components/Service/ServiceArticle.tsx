@@ -26,7 +26,7 @@ const ServiceArticle: React.FC<Props> = ({ service }) => (
         <div className="srvP_bull-card">
             <div className="bull-bd">
                 <Image
-                    src="https://assets.peur-de-la-conduite.fr/img/utils/bulle-bd.svg"
+                    src="/img/utils/bulle-bd.svg"
                     alt="Puces"
                     width={24}
                     height={25}

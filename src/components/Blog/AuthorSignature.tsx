@@ -19,7 +19,7 @@ const formatDate = (date: string | Date) => {
         return date.toString();
     }
 };
-const ava = "https://assets.peur-de-la-conduite.fr/img/about/avatar.webp";
+const ava = "/img/about/avatar.webp";
 const AuthorSignature: React.FC<AuthorSignatureProps> = ({
     author,
     date,
