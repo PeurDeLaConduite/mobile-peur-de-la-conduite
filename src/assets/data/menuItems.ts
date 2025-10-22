@@ -79,22 +79,22 @@ export const menuItems: MenuLinks = {
             AnchorId: "#top",
             svg: "Contact",
         },
-        {
-            id: "reservationId",
-            title: "Réservation",
-            class: "",
-            path: "/reservation",
-            AnchorId: "#top",
-            svg: "Reservation",
-        },
-        {
-            id: "connection",
-            title: "Se connecter",
-            class: "",
-            path: "/connection",
-            AnchorId: "#top",
-            svg: "Connection",
-        },
+        // {
+        //     id: "reservationId",
+        //     title: "Réservation",
+        //     class: "",
+        //     path: "/reservation",
+        //     AnchorId: "#top",
+        //     svg: "Reservation",
+        // },
+        // {
+        //     id: "connection",
+        //     title: "Se connecter",
+        //     class: "",
+        //     path: "/connection",
+        //     AnchorId: "#top",
+        //     svg: "Connection",
+        // },
     ],
 };
 

@@ -3,11 +3,17 @@ import metaData from "./metaData";
 import localFont from "next/font/local";
 import HeaderLazy from "../src/components/header/HeaderLazy";
 import ClientLayout from "./ClientLayout";
-import "./globals.css";
-import "./tarifs.css";
+// import "./globals.css";
+// import "./tarifs.css";
 import { lazy } from "react";
+import dynamic from "next/dynamic";
 import LazyWrapper from "@/src/components/LazyWrapper";
 const Footer = lazy(() => import("../src/components/footer/footer"));
+const NavigationProvider = dynamic(() =>
+    import("../src/utils/context/NavigationContext").then(
+        (mod) => mod.NavigationProvider
+    )
+);
 import DesktopRedirect from "./DesktopRedirect";
 const Montserrat = localFont({
     src: "./fonts/Montserrat.woff2",
@@ -43,19 +49,19 @@ export default function RootLayout({
                     as="image"
                 />
 
-                {/* <link rel="preload" href="/css/globals.css" as="style" />
+                <link rel="preload" href="/css/globals.css" as="style" />
                 <link
                     rel="stylesheet"
                     href="/css/globals.css"
                     fetchPriority="high"
-                /> */}
+                />
 
-                {/* <link rel="preload" href="/css/mobileDefer.css" as="style" />
+                <link rel="preload" href="/css/mobileDefer.css" as="style" />
                 <link
                     rel="stylesheet"
                     href="/css/mobileDefer.css"
                     fetchPriority="low"
-                /> */}
+                />
 
                 {/* <>
                 <script
@@ -154,17 +160,19 @@ export default function RootLayout({
                 className={`${Montserrat.variable} ${Roboto.variable} ${Nunito.variable}`} id="top"
             >
                 <DesktopRedirect />
-                <ClientLayout>
-                    <header>
-                        <div className="content-wrapper">
-                            <HeaderLazy />
-                        </div>
-                    </header>
-                    <main>{children}</main>
-                    <LazyWrapper>
-                        <Footer />
-                    </LazyWrapper>
-                </ClientLayout>
+                <NavigationProvider>
+                    <ClientLayout>
+                        <header>
+                            <div className="content-wrapper">
+                                <HeaderLazy />
+                            </div>
+                        </header>
+                        <main>{children}</main>
+                        <LazyWrapper>
+                            <Footer />
+                        </LazyWrapper>
+                    </ClientLayout>
+                </NavigationProvider>
             </body>
         </html>
     );

@@ -1,8 +1,13 @@
+// SubMenu.tsx
 "use client";
 
-import React from "react";
+import { useMemo, memo } from "react";
 import { MenuItem } from "../../assets/data/menuItems";
 import { useNavigation } from "../../utils/context/NavigationContext";
+import {
+    makePayloadClickHandler,
+    makeActivationHandler,
+} from "@utils/handlers";
 
 interface SubMenuProps {
     menuItem: MenuItem;
@@ -16,25 +21,20 @@ const SubMenu: React.FC<SubMenuProps> = ({
     onSubItemClick,
 }) => {
     const { closeHamburgerMenu } = useNavigation();
-    const handleSubItemClick = (
-        path: string,
-        e: React.MouseEvent | React.KeyboardEvent
-    ) => {
-        e.stopPropagation();
-        e.preventDefault(); // Empêche la navigation par défaut
-        onSubItemClick(path); // Appelle la fonction pour gérer le clic
-        closeHamburgerMenu(650);
-    };
 
-    const handleKeyDown = (
-        path: string,
-        e: React.KeyboardEvent<HTMLElement>
-    ) => {
-        if (["Enter", " "].includes(e.key)) {
-            e.preventDefault(); // Empêche l'action par défaut de la touche
-            onSubItemClick(path); // Ouvre ou effectue une action pour le sous-menu
-        }
-    };
+    const handleSubItemClick = useMemo(
+        () =>
+            makePayloadClickHandler<string>(onSubItemClick, {
+                close: closeHamburgerMenu,
+                delay: 650,
+            }),
+        [onSubItemClick, closeHamburgerMenu]
+    );
+
+    const handleKeyDown = useMemo(
+        () => makeActivationHandler<string>(onSubItemClick),
+        [onSubItemClick]
+    );
 
     if (!menuItem.subItems || menuItem.subItems.length === 0) return null;
 
@@ -63,4 +63,4 @@ const SubMenu: React.FC<SubMenuProps> = ({
     );
 };
 
-export default React.memo(SubMenu);
+export default memo(SubMenu);

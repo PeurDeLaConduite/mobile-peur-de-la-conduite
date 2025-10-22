@@ -1,3 +1,4 @@
+"use client";
 import React, { createContext, useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 interface NavigationContextType {
@@ -5,9 +6,6 @@ interface NavigationContextType {
     updateRoute: (path: string) => void;
     openSubMenu: string | null;
     setOpenSubMenu: (subMenuId: string | null) => void;
-    showNavLinks: boolean;
-    setShowNavLinks: (showNavLinks: boolean) => void;
-    resetDisplayStyles: () => void;
     hamburgerMenuIsOpen: boolean;
     openHamburgerMenu: () => void;
     closeHamburgerMenu: (delay?: number) => void;
@@ -18,7 +16,6 @@ const useNavigationState = () => {
     const pathname = usePathname();
     const [currentRoute, setCurrentRoute] = useState(pathname || "/");
     const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
-    const [showNavLinks, setShowNavLinks] = useState<boolean>(true);
     const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] = useState(false);
     useEffect(() => {
         setCurrentRoute(pathname || "/");
@@ -27,7 +24,6 @@ const useNavigationState = () => {
         setCurrentRoute(path);
         router.push(path);
     };
-    const resetDisplayStyles = () => setOpenSubMenu(null);
     const openHamburgerMenu = () => setHamburgerMenuIsOpen(true);
     const closeHamburgerMenu = (delay: number = 0) => {
         setTimeout(() => setHamburgerMenuIsOpen(false), delay);
@@ -37,9 +33,6 @@ const useNavigationState = () => {
         updateRoute,
         openSubMenu,
         setOpenSubMenu,
-        resetDisplayStyles,
-        showNavLinks,
-        setShowNavLinks,
         hamburgerMenuIsOpen,
         openHamburgerMenu,
         closeHamburgerMenu,
