@@ -10,7 +10,7 @@ export default function DesktopRedirect() {
             return; 
         }    
         window.location.href =
-            "https://desktop.peur-de-la-conduite.fr" +
+            "https://peur-de-la-conduite.fr" +
             window.location.pathname +
             window.location.search +
             window.location.hash;
