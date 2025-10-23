@@ -7,10 +7,10 @@ export default function DesktopRedirect() {
         if (typeof window === "undefined") return; // sécurité côté SSR
 
         if (window.innerWidth < 900) {
-            return; 
-        }    
+            return;
+        }
         window.location.href =
-            "https://peur-de-la-conduite.fr" +
+            "https://desktop.peur-de-la-conduite.fr" +
             window.location.pathname +
             window.location.search +
             window.location.hash;
